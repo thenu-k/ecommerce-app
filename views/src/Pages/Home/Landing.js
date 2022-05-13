@@ -1,6 +1,6 @@
 import React from 'react'
 import './Landing.css'
-const landing_image = require('./../../Assets/larm-rmah-R1Ku62Z7zqE-unsplash.jpg')
+const landing_image = require('./../../Assets/nick-karvounis-AHl1o5ITITI-unsplash (1).jpg')
 
 const Landing = () => {
 
@@ -10,9 +10,9 @@ const Landing = () => {
         <div className="landing container inner">
             <div class="landing image outer center" aria-label='Landing Image'>
                 <img src={landing_image} alt="" loading='lazy'/>
-            </div>
-            <div class="landing text outer" aria-label='Landing Text'>
-
+                <div class="landing text outer center" aria-label='Landing Text'>
+                   <h2>Summer Sale</h2>
+                 </div>
             </div>
         </div>
     </section>

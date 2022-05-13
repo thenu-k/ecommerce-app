@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+// import FontAwesomeIcon from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
   return (
@@ -11,10 +12,11 @@ const Header = () => {
               <h1><a href="/">Shop</a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
-              <form><input type="text" placeholder='Search Items'/></form>
+              <form><input type="text"/></form>
             </div>
             <div className="header action_list outer" aria-label='User Actions'>
               <button className="account_icon outer" aria-label="Account Button">Account</button>
+              {/* <FontAwesomeIcon icon="fa-light fa-circle-user" /> */}
               <button className="cart_icon outer" aria-label="Cart Button">Cart</button>
             </div>
           </div>
@@ -22,8 +24,8 @@ const Header = () => {
             <ul className="header categories" aria-label='Category List'>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/new_arrivals">New Arrivals</Link></li>
-              <li><Link to="/sale">Sale</Link></li>
               <li><Link to="/popular">Popular</Link></li>
+              <li><Link to="/sale">Sale</Link></li>
               <li><Link to="/account">Account</Link></li>
             </ul>
             <div className="header bottom misc_text" aria-label="Misc Text">
