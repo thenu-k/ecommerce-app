@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import FontAwesomeIcon from '@fortawesome/free-solid-svg-icons'
+const Icon_userAccount = require( './../Assets/user-account.png')
+const Icon_cart = require('./../Assets/cart.webp')
 
 const Header = () => {
   return (
@@ -12,12 +13,11 @@ const Header = () => {
               <h1><a href="/">Shop</a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
-              <form><input type="text"/></form>
+              <form class="center"><input type="text"/></form>
             </div>
             <div className="header action_list outer" aria-label='User Actions'>
-              <button className="account_icon outer" aria-label="Account Button">Account</button>
-              {/* <FontAwesomeIcon icon="fa-light fa-circle-user" /> */}
-              <button className="cart_icon outer" aria-label="Cart Button">Cart</button>
+              <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
+              <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
             </div>
           </div>
           <div className="header bottom outer" aria-label="Header Bottom">
@@ -28,9 +28,6 @@ const Header = () => {
               <li><Link to="/sale">Sale</Link></li>
               <li><Link to="/account">Account</Link></li>
             </ul>
-            <div className="header bottom misc_text" aria-label="Misc Text">
-              <p>All our products are build from eco-friendly resources</p>
-            </div>
           </div>
         </nav>
       </header>
