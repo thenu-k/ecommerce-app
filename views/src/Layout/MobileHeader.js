@@ -16,14 +16,11 @@ const MobileHeader = () => {
   return (
     <header className='mobile header outer' aria-label='Header'>
         <nav>
+         <button className='header menu_icon center' onClick={()=>makeVisible()} ><img src={Icon_hamburger}/></button>
           <div className="logo outer header center" aria-label='Logo'>
                 <h1><a href="/"><img src={Icon_logo} alt="Logo"/></a></h1>
           </div>
-          <div className="header actions outer" aria-label='Actions'>
-              <button className='header menu_icon' onClick={()=>makeVisible()} ><img src={Icon_hamburger}/></button>
-              {/* <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button> */}
-              <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
-          </div>
+          <button className="cart_icon outer center" aria-label="Cart Button"><img src={Icon_cart}/></button>
           <div className="links outer" id={menuVisible}>
             asdfasdf
           </div>

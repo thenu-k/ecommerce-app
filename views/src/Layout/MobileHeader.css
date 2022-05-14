@@ -6,35 +6,33 @@ header.mobile{
 
 header.mobile nav{
     width: 100%;
-    display: flex; flex-direction: column; align-items: center;
+    display: flex; align-items: center; flex-direction: row; justify-content: center;
 }
 
 header.mobile nav>div{width: 100%;}
 
 header.mobile .logo.outer{
-    width: 90%;
+    width: 50%;
     padding: 20px 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid black;
     margin-right: 0;
 }
 
-header.mobile .actions.outer{
-    padding: 10px 0;
-    display: flex; 
-}
-header.mobile .actions.outer button{
+
+header.mobile nav button{
     background-color: transparent; border: 0; outline: 0;
-    margin: 0 10px;
+    margin: 0 10px; cursor: pointer;
 }
-header.mobile .actions.outer button:nth-child(1) img{
+header.mobile nav button.menu_icon{
     height: 25px; width: auto;
+    margin-right: auto;
+    margin-left: 10px;
 }
-header.mobile .actions.outer button:nth-child(2){
+header.mobile nav button.cart_icon{
     margin-left: auto; margin-right: 10px;
 }
-header.mobile .actions.outer button img{
-    height: 30px; width: 30px;
+.cart_icon > img:nth-child(1){
+    height: 30px;width: auto;
 }
 
 
