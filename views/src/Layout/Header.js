@@ -8,14 +8,14 @@ const Header = () => {
 
   return (
     <>
-    <header>
+    <header aria-label='Header'>
         <nav className="center">
           <div className="header top outer" aria-label="Header Top">
             <div className="logo outer header" aria-label='Logo'>
               <h1><a href="/">Shop</a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
-              <form className="center"><input type="text"/></form>
+              <form className="center"><input type="text" placeholder='Search Items'/></form>
             </div>
             <div className="header action_list outer" aria-label='User Actions'>
               <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
