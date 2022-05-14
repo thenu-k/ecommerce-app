@@ -8,9 +8,9 @@ const Landing = () => {
     <>
     <section aria-label='Landing Section' className="landing container outer">
         <div className="landing container inner">
-            <div class="landing image outer center" aria-label='Landing Image'>
+            <div className="landing image outer center" aria-label='Landing Image'>
                 <img src={landing_image} alt="" loading='lazy'/>
-                <div class="landing text outer center" aria-label='Landing Text'>
+                <div className="landing text outer center" aria-label='Landing Text'>
                    <h2>Summer Sale</h2>
                  </div>
             </div>

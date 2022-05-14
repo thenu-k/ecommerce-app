@@ -1,0 +1,14 @@
+*{
+    margin:0; padding: 0;
+    font-size: 16px; font-weight: normal; color: black;
+    text-decoration: none; list-style: none;
+    font-family: 'Lora', serif;}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+}
+
+.center{
+    display: flex; align-items: center; justify-content: center;
+}

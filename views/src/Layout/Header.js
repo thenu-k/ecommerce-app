@@ -1,9 +1,11 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import './JS_Header'
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.webp')
 
 const Header = () => {
+
   return (
     <>
     <header>
@@ -13,7 +15,7 @@ const Header = () => {
               <h1><a href="/">Shop</a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
-              <form class="center"><input type="text"/></form>
+              <form className="center"><input type="text"/></form>
             </div>
             <div className="header action_list outer" aria-label='User Actions'>
               <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
