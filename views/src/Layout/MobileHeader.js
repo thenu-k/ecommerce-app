@@ -20,7 +20,7 @@ const MobileHeader = () => {
           </div>
           <div className="header actions outer" aria-label='Actions'>
               <button className='header menu_icon' onClick={()=>makeVisible()} ><img src={Icon_hamburger}/></button>
-              <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
+              {/* <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button> */}
               <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
           </div>
           <div className="links outer" id={menuVisible}>
