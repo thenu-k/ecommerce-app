@@ -1,4 +1,4 @@
-import {React, useEffect} from 'react'
+import {React, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './JS_Header'
 const Icon_userAccount = require( './../Assets/user-account.png')
@@ -6,16 +6,17 @@ const Icon_cart = require('./../Assets/cart.webp')
 
 const Header = () => {
 
+
   return (
     <>
     <header aria-label='Header'>
-        <nav className="center">
+        <nav className="center" aria-label='Navigation'>
           <div className="header top outer" aria-label="Header Top">
             <div className="logo outer header" aria-label='Logo'>
               <h1><a href="/">Shop</a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
-              <form className="center"><input type="text" placeholder='Search Items'/></form>
+              <form className="center" aria-label='Search'><input type="text" placeholder='Search Items'/></form>
             </div>
             <div className="header action_list outer" aria-label='User Actions'>
               <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
@@ -23,7 +24,7 @@ const Header = () => {
             </div>
           </div>
           <div className="header bottom outer" aria-label="Header Bottom">
-            <ul className="header categories" aria-label='Category List'>
+            <ul className={classList} aria-label='Category List'>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/new_arrivals">New Arrivals</Link></li>
               <li><Link to="/popular">Popular</Link></li>
@@ -33,6 +34,7 @@ const Header = () => {
           </div>
         </nav>
       </header>
+
       </>
   )
 }

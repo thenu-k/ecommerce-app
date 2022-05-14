@@ -9,9 +9,9 @@ const Featured = () => {
   return (
     <section className="featured container outer center" aria-label='Featured Collections Section'>
         <div className="featured_wrap outer featured" aria-label='Feautured Collections Container'>
-              <div><img src={Image_featured2} alt=""/></div>
-              <div><img src={Image_featured3} alt=""/></div>
-              <div><img src={Image_featured1} alt=""/></div>
+              <div><img src={Image_featured2} alt="Man in red suit"/></div>
+              <div><img src={Image_featured3} alt="Lady in casual wear"/></div>
+              <div><img src={Image_featured1} alt="Lady in blue dress"/></div>
         </div>
     </section>
   )

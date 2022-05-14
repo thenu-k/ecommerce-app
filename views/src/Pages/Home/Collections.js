@@ -27,10 +27,10 @@ const Collections = () => {
     <section className="collections container outer" aria-label='Collections'>
         <div className="collections container inner to-animate">
             <Link to='' className="collections collection_wrap forHim outer center appearOnScroll" aria-label='For Him'>
-                <img src={Image_forHim} alt="" loading='lazy'/>
+                <img src={Image_forHim} alt="For him: Image" loading='lazy'/>
             </Link>
             <Link to='' className="collections collection_wrap forHer outer center" aria-label="For Her">
-                <img src={Image_forHer} alt="" loading='lazy'/>
+                <img src={Image_forHer} alt="For her: Image" loading='lazy'/>
             </Link>
         </div>
     </section>

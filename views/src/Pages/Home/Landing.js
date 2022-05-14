@@ -9,7 +9,7 @@ const Landing = () => {
     <section aria-label='Landing Section' className="landing container outer">
         <div className="landing container inner">
             <div className="landing image outer center" aria-label='Landing Image'>
-                <img src={landing_image} alt="" loading='lazy'/>
+                <img src={landing_image} alt="Lady in casual wear" loading='lazy'/>
                 <div className="landing text outer center" aria-label='Landing Text'>
                    <h2>Summer Sale</h2>
                  </div>

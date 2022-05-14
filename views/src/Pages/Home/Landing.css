@@ -43,3 +43,8 @@
         transform: translate(10%, 10%)
     }
 }
+@media all and (max-width: 400px){
+    .landing.image.outer img{
+        transform: translate(15%, 10%)
+    }
+}
