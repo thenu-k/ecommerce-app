@@ -1,0 +1,49 @@
+
+header.mobile{
+    background-color: rgb(230, 227, 227);
+    width: 100%;
+}
+
+header.mobile nav{
+    width: 100%;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+header.mobile nav>div{width: 100%;}
+
+header.mobile .logo.outer{
+    width: 80%;
+    padding: 20px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+header.mobile .actions.outer{
+    padding: 5px 0;
+    display: flex; 
+}
+header.mobile .actions.outer button{
+    background-color: transparent; border: 0; outline: 0;
+    margin: 0 10px;
+}
+header.mobile .actions.outer button:nth-child(1) img{
+    height: 20px; width: auto;
+}
+header.mobile .actions.outer button:nth-child(2){
+    margin-left: auto;
+}
+header.mobile .actions.outer button img{
+    height: 30px; width: 30px;
+}
+
+
+/* Innards */
+header.mobile .links.outer{
+    position: fixed; top: 0; right: -200px; z-index: 9999;
+    width: 200px; height: 100vh; 
+    background-color: white;
+    transition: all 200ms ease-out;
+}
+header.mobile .links.outer#visible{
+    right: 0;
+}
