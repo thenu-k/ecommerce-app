@@ -1,12 +1,9 @@
 import {React, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import './JS_Header'
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.webp')
 
-const Header = () => {
-
-
+const Header = (props) => {
   return (
     <>
     <header aria-label='Header'>
@@ -24,7 +21,7 @@ const Header = () => {
             </div>
           </div>
           <div className="header bottom outer" aria-label="Header Bottom">
-            <ul className={classList} aria-label='Category List'>
+            <ul className='header categories' aria-label='Category List'>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/new_arrivals">New Arrivals</Link></li>
               <li><Link to="/popular">Popular</Link></li>
