@@ -8,7 +8,13 @@ const Icon_logo = require('./../Assets/logo.png')
 
 const MobileHeader = () => {
   const [menuVisible, setMenuVisible] = useState('notVisible')
-  useEffect(() => {}, [menuVisible])   //Importamt
+  useEffect(() => {
+    //Menu click out to close
+    const click_area = document.querySelector('header.mobile .links.outer .clickable')
+    click_area.addEventListener('click', ()=>{
+      setMenuVisible('notVisible')
+    })
+  }, [menuVisible])   //Important
   function makeVisible(){
     if(menuVisible==='notVisible'){setMenuVisible('visible')}
     if(menuVisible==='visible'){setMenuVisible('notVisible')}
@@ -22,7 +28,8 @@ const MobileHeader = () => {
           </div>
           <button className="cart_icon outer center" aria-label="Cart Button"><img src={Icon_cart}/></button>
           <div className="links outer" id={menuVisible}>
-            asdfasdf
+            <div className="clickable">asdfad</div>
+            <div className="links inner">asdfadsf</div>
           </div>
         </nav>
     </header>

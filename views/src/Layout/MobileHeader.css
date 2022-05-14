@@ -38,11 +38,24 @@ header.mobile nav button.cart_icon{
 
 /* Innards */
 header.mobile .links.outer{
-    position: fixed; top: 0; right: -200px; z-index: 9999;
-    width: 200px; height: 120vh; 
+    top: 0; right: 0; 
+    position: fixed; z-index: 9999;
+    width: 100%; height: 120%; 
+    background-color: transparent;
+    transition: transform 200ms ease-out;
+    display: flex;
+}
+header.mobile .links.outer .links.inner{
+    width: 60%; height: 100%;
     background-color: white;
-    transition: all 200ms ease-out;
+}
+header.mobile .links.outer .clickable{
+    width: 40%; height: 100%;
+    background-color: transparent;
+}
+header.mobile .links.outer#notVisible{
+    transform: translateX(100%)
 }
 header.mobile .links.outer#visible{
-    transform: translateX(-200px)
+    transform: translateX(0); 
 }
