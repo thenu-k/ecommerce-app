@@ -3,6 +3,7 @@ import './MobileHeader.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.webp')
 const Icon_hamburger = require('./../Assets/hamburgerIcon.png')
+const Icon_logo = require('./../Assets/logo.png')
 
 
 const MobileHeader = () => {
@@ -16,7 +17,7 @@ const MobileHeader = () => {
     <header className='mobile header outer' aria-label='Header'>
         <nav>
           <div className="logo outer header center" aria-label='Logo'>
-                <h1><a href="/">Shop</a></h1>
+                <h1><a href="/"><img src={Icon_logo} alt="Logo"/></a></h1>
           </div>
           <div className="header actions outer" aria-label='Actions'>
               <button className='header menu_icon' onClick={()=>makeVisible()} ><img src={Icon_hamburger}/></button>

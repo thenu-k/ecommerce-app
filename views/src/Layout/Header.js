@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import './Header.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.webp')
+const Icon_logo = require('./../Assets/logo.png')
 
 const Header = (props) => {
   return (
@@ -11,7 +12,7 @@ const Header = (props) => {
         <nav className="center" aria-label='Navigation'>
           <div className="header top outer" aria-label="Header Top">
             <div className="logo outer header" aria-label='Logo'>
-              <h1><a href="/">Shop</a></h1>
+              <h1><a href="/"><img src={Icon_logo} alt="Logo"/></a></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
               <form className="center" aria-label='Search'><input type="text" placeholder='Search Items'/></form>
