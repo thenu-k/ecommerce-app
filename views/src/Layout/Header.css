@@ -52,6 +52,9 @@ nav{
 .header.action_list.outer img{
     height: 30px; width: auto;
 }
+.header.action_list.outer button:last-child img{
+    height: 40px; width: auto;
+}
 
 
 .header.action_list.outer{

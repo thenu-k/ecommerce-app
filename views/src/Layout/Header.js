@@ -2,7 +2,7 @@ import {React, useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import './Header.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
-const Icon_cart = require('./../Assets/cart.webp')
+const Icon_cart = require('./../Assets/cart.png')
 const Icon_logo = require('./../Assets/logo.png')
 
 const Header = (props) => {

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import './MobileHeader.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
-const Icon_cart = require('./../Assets/cart.webp')
+const Icon_cart = require('./../Assets/cart.png')
 const Icon_hamburger = require('./../Assets/hamburgerIcon.png')
 const Icon_logo = require('./../Assets/logo.png')
 
