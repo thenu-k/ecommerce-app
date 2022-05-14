@@ -7,13 +7,11 @@ const Image_featured3 = require('../../Assets/featured3.jpg')
 
 const Featured = () => {
   return (
-    <section className="featured container outer" aria-label='Featured Collections Section'>
+    <section className="featured container outer center" aria-label='Featured Collections Section'>
         <div className="featured_wrap outer featured" aria-label='Feautured Collections Container'>
-            <ul>
-                <li><Link to=""><img src={Image_featured2} alt=""/></Link></li>
-                <li><Link to=""><img src={Image_featured3} alt=""/></Link></li>
-                <li><Link to=""><img src={Image_featured1} alt=""/></Link></li>
-            </ul>
+              <div><img src={Image_featured2} alt=""/></div>
+              <div><img src={Image_featured3} alt=""/></div>
+              <div><img src={Image_featured1} alt=""/></div>
         </div>
     </section>
   )
