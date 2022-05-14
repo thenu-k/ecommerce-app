@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 import './MobileHeader.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.png')
@@ -24,12 +25,21 @@ const MobileHeader = () => {
         <nav>
          <button className='header menu_icon center' onClick={()=>makeVisible()} ><img src={Icon_hamburger}/></button>
           <div className="logo outer header center" aria-label='Logo'>
-                <h1><a href="/"><img src={Icon_logo} alt="Logo"/></a></h1>
+                <h1><Link to=''><img src={Icon_logo} alt="Logo"/></Link></h1>
           </div>
           <button className="cart_icon outer center" aria-label="Cart Button"><img src={Icon_cart}/></button>
           <div className="links outer" id={menuVisible}>
-            <div className="clickable">asdfad</div>
-            <div className="links inner">asdfadsf</div>
+            <div className="clickable" aria-label='Ignore: Placeholder Element'></div>
+            <div className="links inner">
+              <h3>Pages</h3>
+              <ul>
+                <li><Link to=''>Home</Link></li>
+                <li><Link to=''>Popular</Link></li>
+                <li><Link to=''>New Arrivals</Link></li>
+                <li><Link to=''>Sale</Link></li>
+                <li><Link to='/account'>Account</Link></li>
+              </ul>
+            </div>
           </div>
         </nav>
     </header>
