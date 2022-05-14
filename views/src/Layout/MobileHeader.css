@@ -44,5 +44,5 @@ header.mobile .links.outer{
     transition: all 200ms ease-out;
 }
 header.mobile .links.outer#visible{
-    right: 0;
+    transform: translateX(-200px)
 }
