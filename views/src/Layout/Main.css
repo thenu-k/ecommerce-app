@@ -46,6 +46,15 @@ footer .bottom_section.outer h5{font-size: 0.9em; font-weight: 700; margin-botto
 footer .bottom_section.outer a:focus{ border-bottom: 1px solid black; outline: 0;}
 footer .bottom_section.outer h5:focus{ outline: 1px solid black;}
 
+@media all and (max-width: 800px){
+    footer .bottom_section.outer{width: 95%;}
+}
+@media all and (max-width: 500px){
+    footer .bottom_section.outer{
+        flex-direction: column;
+    }
+}
+
 /* Header =============== */
 /* Top Section */
 .header.top.outer{
