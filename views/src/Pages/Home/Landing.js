@@ -1,6 +1,6 @@
 import React from 'react'
 import './Landing.css'
-const landing_image = require('./../../Assets/nick-karvounis-AHl1o5ITITI-unsplash (1).jpg')
+const landing_image = require('./../../Assets/landing.jpg')
 
 const Landing = () => {
 

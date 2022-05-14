@@ -6,7 +6,7 @@
 }
 
 .collections.collection_wrap.outer{
-    height: 400px; width: 40%;
+    height: 500px; width: 40%;
     background-color: black;
     transition: width ease-out 200ms;
     margin: 70px 0;
@@ -20,7 +20,7 @@
     outline: 2px black solid;
 }
 .collections.collection_wrap.outer img{
-    width:100%;
+    width: 800px;
 }
 
 /* Animations */

@@ -12,7 +12,6 @@ const check_appear = ()=>{
 }
 const offset_value = 0
 const scroll_elements = document.querySelectorAll('.appearOnScroll')
-console.log(scroll_elements)
 document.addEventListener('scroll', check_appear)
 
 

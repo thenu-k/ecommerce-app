@@ -20,7 +20,6 @@ const Collections = () => {
         }
         const offset_value = -50
         const scroll_elements = document.querySelectorAll('.to-animate')
-        console.log(scroll_elements)
         document.addEventListener('scroll', check_appear)
     },[])
   return (
@@ -28,10 +27,10 @@ const Collections = () => {
     <section className="collections container outer" aria-label='Collections'>
         <div className="collections container inner to-animate">
             <Link to='' className="collections collection_wrap forHim outer center appearOnScroll" aria-label='For Him'>
-                <img src={Image_forHim} alt=""/>
+                <img src={Image_forHim} alt="" loading='lazy'/>
             </Link>
             <Link to='' className="collections collection_wrap forHer outer center" aria-label="For Her">
-                <img src={Image_forHer} alt=""/>
+                <img src={Image_forHer} alt="" loading='lazy'/>
             </Link>
         </div>
     </section>
