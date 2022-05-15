@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/" element={<Layout/>}>
           {/* Unprotected Routes */}
           <Route index element={<Home/>}/>
-          <Route path="search/:query" element={<Search/>}/>
+          <Route path="search/:search_query" element={<Search/>}/>
           
           {/* Protected Routes */}
           <Route element={<Auth/>}>

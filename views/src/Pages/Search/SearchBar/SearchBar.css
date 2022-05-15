@@ -1,0 +1,33 @@
+
+.searchbar.container.outer{
+    width: 100%; height: 50px;
+    display: flex; 
+    align-items: center; 
+    position: fixed; top: 65px; z-index: 999;  /*Height of header*/
+    background-color: #fff;
+}
+
+.searchbar.container.outer .search_query{
+    font-weight: 500; font-size: 1.5em;
+    margin-left: 30px; 
+}
+
+.searchbar.container.outer form{margin-left: 50px;}
+.searchbar.container.outer .searchbar.input{
+    width: 45vw; height: 30px; outline: 0; border: 0;
+    background-color: rgb(238, 238, 238);
+    margin-right: 50px;
+}
+
+.searchbar.container.outer form select{
+    outline: 0; border: 0;
+    border-bottom: 4px solid black;
+    background-color: white;;
+    height: 30px;
+}
+.searchbar.container.outer form .filter:first-of-type{
+    margin-right: 20px;
+}
+
+@media all and (max-width: 1150px){
+}
