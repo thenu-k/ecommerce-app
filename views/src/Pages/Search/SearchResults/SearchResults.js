@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react'
+import LoadingIcon from '../../../Models/LoadingIcon/LoadingIcon'
+import './SearchResults.css'
 
 const SearchResults = () => {
 
@@ -13,10 +15,10 @@ const SearchResults = () => {
   }
 
   return (
-    <section className="searchresults outer container" style={{marginTop: '65px'}}>
+    <section className="searchresults outer container" style={{marginTop: '50px'}}>
       {
         results.loading ?
-          <div>Loading</div>
+          <LoadingIcon/>
         :
           results.map(item=>{return(<div>{item.title}</div>)})
       }
