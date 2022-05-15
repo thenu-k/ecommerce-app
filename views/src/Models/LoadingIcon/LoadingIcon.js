@@ -12,7 +12,6 @@ const LoadingIcon = () => {
                 border-radius: 4px;
                 background: currentColor;
                 display: block;
-                margin: -50px auto 0;
                 position: relative;
                 color: #FFF;
                 transform: translateY(30px);
