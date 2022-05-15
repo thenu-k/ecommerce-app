@@ -10,19 +10,10 @@ const Header = (props) => {
     <>
     <header aria-label='Header'>
         <nav className="center" aria-label='Navigation'>
-          <div className="header top outer" aria-label="Header Top">
-            <div className="logo outer header" aria-label='Logo'>
-              <h1><Link to=''>GENESIS</Link></h1>
-            </div>
-            <div className="header search_bar outer" aria-label='Search Bar'>
-              <form className="center" aria-label='Search'><input type="text" placeholder='Search Items'/></form>
-            </div>
-            <div className="header action_list outer" aria-label='User Actions'>
-              <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
-              <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
-            </div>
+          <div className="logo outer header" aria-label='Logo'>
+            <h1><Link to=''>GENESIS</Link></h1>
           </div>
-          <div className="header bottom outer" aria-label="Header Bottom">
+          <div className="header search_bar outer" aria-label='Search Bar'>
             <ul className='header categories' aria-label='Category List'>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/new_arrivals">New Arrivals</Link></li>
@@ -30,6 +21,10 @@ const Header = (props) => {
               <li><Link to="/sale">Sale</Link></li>
               <li><Link to="/account">Account</Link></li>
             </ul>
+          </div>
+          <div className="header action_list outer" aria-label='User Actions'>
+            <button className="account_icon outer" aria-label="Account Button"><img src={Icon_userAccount}/></button>
+            <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
           </div>
         </nav>
       </header>

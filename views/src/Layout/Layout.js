@@ -12,10 +12,10 @@ const Layout = () => {
     window.addEventListener('resize', checkMobile)
     function checkMobile(){
       let windowWidth = window.innerWidth
-      if(windowWidth<650){
+      if(windowWidth<700){
         setMobile(true)
       }
-      if(windowWidth>650){
+      if(windowWidth>700){
         setMobile(false)
       }
     }
@@ -29,6 +29,7 @@ const Layout = () => {
           :
           <Header/>
       }
+      <div style={{ height: '65px'}}></div> {/*Padding Element*/}
       <Outlet/>
       <Footer/>
     </>
