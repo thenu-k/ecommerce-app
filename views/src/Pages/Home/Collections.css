@@ -6,7 +6,7 @@
 }
 
 .collections.collection_wrap.outer{
-    height: 500px; width: 40%; max-width: 800px;
+    height: 30vw; width: 40%; max-width: 800px;
     background-color: black;
     transition: width 200ms ease-out;
     margin: 70px 0;
@@ -20,7 +20,7 @@
     outline: 2px black solid;
 }
 .collections.collection_wrap.outer img{
-    width: 800px;
+    width: 60vw;  max-width: 800px; height: auto;
 }
 
 /* Animations */
@@ -39,7 +39,7 @@
 /* Alt screens */
 @media all and (max-width: 900px){
     .collections.collection_wrap.outer{
-        height: 400px;
+        height: 300px;
     }
     .collections.collection_wrap.outer img{
         width: 600px;
