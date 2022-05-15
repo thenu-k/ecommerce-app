@@ -6,8 +6,7 @@
 /* Main */
 .featured.outer.featured_wrap{
     width: 100%; 
-    margin: 70px 0;
-    width: 100%; display: flex; justify-content: center; align-items: center; gap: 5px;
+    width: 100%; display: flex; justify-content: center; align-items: center; 
 }
 .featured.outer.featured_wrap>div{
     display: flex; justify-content: center; align-items: center;
@@ -28,7 +27,7 @@
 /* Alt screens */
 /* At a width of 900px, will convert 3 part element into one large part with no gaps. */
 @media all and (max-width: 900px){
-    .featured.outer.featured_wrap{gap: 0; margin-top: 0px;}
+    .featured.outer.featured_wrap{gap: 0; margin: 0px;}
     .featured.outer.featured_wrap>div{height: 60vw;}
     .featured.outer.featured_wrap  img{height: 100%; width: auto}
 }
@@ -38,7 +37,6 @@
         width: 90%; height: 150vw; max-height: 1000px;
         display: grid; gap: 0;
         grid-template: 1fr 1fr/ 1fr 1fr;
-        margin-top: 70px;
     }
     .featured.outer.featured_wrap>div:last-child{display: inline-block;}
     .featured.outer.featured_wrap>div{

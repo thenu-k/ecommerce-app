@@ -1,14 +1,16 @@
 import React from 'react'
 import Landing from './Landing'
-import Collections from './Collections'
 import Featured from './Featured'
+import Large1 from './Large1'
+import Large2 from './Large2'
 
 const Home = () => {
   return (
     <>
       <Landing/>
-      <Collections/>
+      <Large1/>
       <Featured/>
+      <Large2/>
     </>
   )
 }
