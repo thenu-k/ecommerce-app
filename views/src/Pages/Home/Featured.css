@@ -1,20 +1,19 @@
 .featured.container.outer{
     width: 100%;display: flex; flex-direction: column; 
     background-color: rgb(255, 255, 255);
-    overflow-x: scroll;
 }
 
 /* Main */
 .featured.outer.featured_wrap{
-    width: 100%; min-width: 800px;
+    width: 100%; 
     margin: 70px 0;
     width: 100%; display: flex; justify-content: center; align-items: center; gap: 5px;
 }
 .featured.outer.featured_wrap>div{
     display: flex; justify-content: center; align-items: center;
-    height: 700px; width: 30%; max-width: 500px; min-width: 350px;
+    height: 45vw; width: 30%; max-width: 500px;  max-height: 750px;
     overflow: hidden;
-    background-color: gray;
+    background-color: #9195A0;
 }
 .featured.outer.featured_wrap img {width: 100%; height: auto;}
 .featured.outer.featured_wrap>div:nth-child(2) img{transform: translateX(-5%)}
@@ -23,5 +22,21 @@
 }
 
 @media all and (max-width: 800px){
-    .featured.outer.featured_wrap img{height: 100%; width: auto}
+    .featured.outer.featured_wrap img{height: 105%; width: auto}
+}
+
+/* Alt screens */
+/* At a width of 900px, will convert 3 part element into one large part with no gaps. */
+
+@media all and (max-width: 700px){
+    .featured.outer.featured_wrap>div:nth-child(2) img{transform: translateX(0%)}
+    .featured.outer.featured_wrap{
+        width: 90%; height: 150vw; max-height: 1000px;
+        display: grid; gap: 0;
+        grid-template: 1fr 1fr/ 1fr 1fr;
+    }
+    .featured.outer.featured_wrap>div{
+        height: 100%; width: 100%;
+    }
+    .featured.outer.featured_wrap>div:nth-child(3) img{transform: translateX(-5%)}
 }
