@@ -12,7 +12,7 @@ const Header = (props) => {
         <nav className="center" aria-label='Navigation'>
           <div className="header top outer" aria-label="Header Top">
             <div className="logo outer header" aria-label='Logo'>
-              <h1><a href="/"><img src={Icon_logo} alt="Logo"/></a></h1>
+              <h1><Link to=''>GENESIS</Link></h1>
             </div>
             <div className="header search_bar outer" aria-label='Search Bar'>
               <form className="center" aria-label='Search'><input type="text" placeholder='Search Items'/></form>
