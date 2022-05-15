@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Layout = () => {
 
-  //Rendering the correct header
+  //Checking the screen size
   const [isMobile, setMobile] = useState()
   useEffect(()=>{
     checkMobile()

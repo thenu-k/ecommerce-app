@@ -6,7 +6,7 @@
 }
 
 .collections.collection_wrap.outer{
-    height: 500px; width: 40%;
+    height: 500px; width: 40%; max-width: 800px;
     background-color: black;
     transition: width 200ms ease-out;
     margin: 70px 0;
@@ -34,4 +34,55 @@
 .collections.container.inner.animate-now>a:last-child{
     transition: transform 0.4s ease-out 0.2s, width 100ms ease-out;
     transform: translateY(0)
+}
+
+/* Alt screens */
+@media all and (max-width: 900px){
+    .collections.collection_wrap.outer{
+        height: 400px;
+    }
+    .collections.collection_wrap.outer img{
+        width: 600px;
+    }
+}
+@media all and (max-width: 600px){
+    .collections.inner.container{
+        flex-direction: column; 
+        margin-top: 70px;
+    }
+    .collections.collection_wrap.outer{
+        width: 90%; height: 250px; margin: 0; transition: none !important;
+    }
+    .collections.collection_wrap.outer img{
+        width: 600px;
+    }
+
+    /* Removing the hover effect */
+    .collections.collection_wrap.outer:hover{
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 450px){
+    .collections.collection_wrap.outer{
+        width: 90%; height: 200px; margin: 0;
+    }
+    .collections.collection_wrap.outer img{
+        width: 410px;
+    }    
+}
+@media all and (max-width: 300px){
+    .collections.collection_wrap.outer img{
+        height: 100%;
+        width: auto;
+    }       
+}
+
+@media all and (min-width: 1850px){
+    .collections.collection_wrap.outer{
+        width: 700px;
+    }
+    .collections.collection_wrap.outer:hover{
+        width: 800px;
+    }
 }
