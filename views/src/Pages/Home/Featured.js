@@ -4,6 +4,8 @@ import './Featured.css'
 const Image_featured1 = require('../../Assets/featured1.jpg')
 const Image_featured2 = require('../../Assets/featured2.jpg')
 const Image_featured3 = require('../../Assets/featured3.jpg')
+const Image_featured4 = require('../../Assets/featured4.jpg')
+
 
 const Featured = () => {
   return (
@@ -12,6 +14,7 @@ const Featured = () => {
               <div><img src={Image_featured2} alt="Man in red suit"/></div>
               <div><img src={Image_featured3} alt="Lady in casual wear"/></div>
               <div><img src={Image_featured1} alt="Lady in blue dress"/></div>
+              <div><img src={Image_featured4} alt="Lady yellow outfit"/></div>
         </div>
     </section>
   )

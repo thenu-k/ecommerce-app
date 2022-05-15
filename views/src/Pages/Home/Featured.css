@@ -11,7 +11,7 @@
 }
 .featured.outer.featured_wrap>div{
     display: flex; justify-content: center; align-items: center;
-    height: 45vw; width: 30%; max-width: 500px;  max-height: 750px;
+    height: 40vw; width: 30%; max-width: 500px;  max-height: 750px;
     overflow: hidden;
     background-color: #9195A0;
 }
@@ -20,7 +20,7 @@
 .featured.outer.featured_wrap>div:nth-child(3) img{
     height: 100%; width: auto;
 }
-
+.featured.outer.featured_wrap>div:last-child{display: none;}
 @media all and (max-width: 800px){
     .featured.outer.featured_wrap img{height: 105%; width: auto}
 }
@@ -28,7 +28,9 @@
 /* Alt screens */
 /* At a width of 900px, will convert 3 part element into one large part with no gaps. */
 @media all and (max-width: 900px){
-    .featured.outer.featured_wrap{gap: 0;}
+    .featured.outer.featured_wrap{gap: 0; margin-top: 0px;}
+    .featured.outer.featured_wrap>div{height: 60vw;}
+    .featured.outer.featured_wrap  img{height: 100%; width: auto}
 }
 @media all and (max-width: 700px){
     .featured.outer.featured_wrap>div:nth-child(2) img{transform: translateX(0%)}
@@ -36,7 +38,9 @@
         width: 90%; height: 150vw; max-height: 1000px;
         display: grid; gap: 0;
         grid-template: 1fr 1fr/ 1fr 1fr;
+        margin-top: 70px;
     }
+    .featured.outer.featured_wrap>div:last-child{display: inline-block;}
     .featured.outer.featured_wrap>div{
         height: 100%; width: 100%;
     }
