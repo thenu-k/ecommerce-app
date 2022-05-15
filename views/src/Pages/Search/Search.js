@@ -8,10 +8,10 @@ import SearchResults from './SearchResults/SearchResults'
 const Search = () => {
   const params = useParams()
   return (
-    <section id="SearchPage" aria-label='Seach Page'>
+    <>
       <SearchBar search_query={params.search_query}/>
       <SearchResults/>
-    </section>
+    </>
   )
 }
 
