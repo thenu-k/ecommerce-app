@@ -68,7 +68,7 @@ header.mobile .links.inner h3{
 }
 header.mobile .links.inner ul{
     width: 100%;
-    display: flex;align-items: center;justify-content: center;flex-direction: column;
+    display: flex;align-items: center;justify-content: center;flex-direction: column; gap: 0;
 }
 header.mobile .links.inner li{
     width: 80%;

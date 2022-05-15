@@ -29,6 +29,7 @@ nav ul{
 nav ul a{
     font-weight: 500;
 }
+nav ul a:hover{border-bottom: 2px solid black}
 
 .header.action_list.outer button{
     background-color: transparent; 

@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Outlet, Link } from 'react-router-dom'
-import Footer from './Footer' ;import Header from './Header';import MobileHeader from './MobileHeader'
-import './Footer.css' 
+import Footer from '../Common/Footer'
+import Header from '../Common/Header'
+import MobileHeader from '../Common/MobileHeader'
 
 const Layout = () => {
 
