@@ -27,7 +27,9 @@
 
 /* Alt screens */
 /* At a width of 900px, will convert 3 part element into one large part with no gaps. */
-
+@media all and (max-width: 900px){
+    .featured.outer.featured_wrap{gap: 0;}
+}
 @media all and (max-width: 700px){
     .featured.outer.featured_wrap>div:nth-child(2) img{transform: translateX(0%)}
     .featured.outer.featured_wrap{
