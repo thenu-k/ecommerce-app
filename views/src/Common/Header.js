@@ -1,6 +1,7 @@
 import {React, useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './Header.css' ;
+import HeaderLinks from './HeaderLinks';
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.png')
 const Icon_logo = require('./../Assets/logo.png')
@@ -15,11 +16,7 @@ const Header = (props) => {
           </div>
           <div className="header search_bar outer" aria-label='Search Bar'>
             <ul className='header categories' aria-label='Category List'>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/new_arrivals">New Arrivals</Link></li>
-              <li><Link to="/popular">Popular</Link></li>
-              <li><Link to="/sale">Sale</Link></li>
-              <li><Link to="/account">Account</Link></li>
+              <HeaderLinks/>
             </ul>
           </div>
           <div className="header action_list outer" aria-label='User Actions'>

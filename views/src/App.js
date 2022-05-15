@@ -6,6 +6,7 @@ import Layout from './Layout/Layout'; import Auth from './Auth/Auth'
 import Home from './Pages/Home/Home' 
 import Account from './Pages/Account/Account'
 import Error404 from './Pages/404/Error404'
+import Search from './Pages/Search/Search'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Layout/>}>
           {/* Unprotected Routes */}
           <Route index element={<Home/>}/>
+          <Route path="search/:query" element={<Search/>}/>
           
           {/* Protected Routes */}
           <Route element={<Auth/>}>

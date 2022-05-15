@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
+import HeaderLinks from './HeaderLinks';
 import './MobileHeader.css' ;
 const Icon_userAccount = require( './../Assets/user-account.png')
 const Icon_cart = require('./../Assets/cart.png')
@@ -32,11 +33,7 @@ const MobileHeader = () => {
             <div className="links inner">
               <h3>Pages</h3>
               <ul>
-                <li><Link to=''>Home</Link></li>
-                <li><Link to=''>Popular</Link></li>
-                <li><Link to=''>New Arrivals</Link></li>
-                <li><Link to=''>Sale</Link></li>
-                <li><Link to='/account'>Account</Link></li>
+                <HeaderLinks/>
               </ul>
             </div>
           </div>
