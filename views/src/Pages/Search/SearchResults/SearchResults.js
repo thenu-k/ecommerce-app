@@ -15,7 +15,7 @@ const SearchResults = () => {
   }
 
   return (
-    <section className="searchresults outer container" style={{marginTop: '50px'}}>
+    <section className="searchresults outer container" style={{marginTop: '50px'}} id={results.loading ? 'SearchResultsLoading' : 'SearchResultsDone'}>
       {
         results.loading ?
           <LoadingIcon/>

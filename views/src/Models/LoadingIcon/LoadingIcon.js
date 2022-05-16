@@ -41,7 +41,7 @@ const LoadingIcon = () => {
             @keyframes animloader {
                 0% {
                 top: 0;
-                color: white;
+                color: black;
                 }
                 50% {
                 top: 30px;
@@ -49,7 +49,7 @@ const LoadingIcon = () => {
                 }
                 100% {
                 top: 0;
-                color: white;
+                color: black;
                 }
             }
           

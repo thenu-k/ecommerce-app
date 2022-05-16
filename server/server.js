@@ -20,7 +20,7 @@ const items = [
     }
 ]
 
-app.get('/test', (req,res)=>{
+app.get('/test', async(req,res)=>{
     console.log("Sending test data")
-    res.send(items)
+    setTimeout(()=>{res.send(items)}, 1500)
 })

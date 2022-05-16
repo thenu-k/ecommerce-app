@@ -7,6 +7,7 @@ import SearchResults from './SearchResults/SearchResults'
 
 const Search = () => {
   const params = useParams()
+  useEffect(()=>{},[])
   return (
     <>
       <SearchBar search_query={params.search_query}/>
