@@ -1,23 +1,27 @@
 import React, {useState, useEffect} from 'react'
 import { Outlet, Link } from 'react-router-dom'
-import Footer from '../Common/Footer'
-import Header from '../Common/Header'
-import MobileHeader from '../Common/MobileHeader'
+//Redux
+import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } from '../StateManager/mainSlice';
+//Components
+import Footer from '../Common/Footer';import Header from '../Common/Header';import MobileHeader from '../Common/MobileHeader'
 
 const Layout = () => {
+  console.log("I rendered")
+  //Redux state
+  const {isMobile} = useSelector((state)=>state.isMobile)
+  const dispatch = useDispatch()
 
-  //Checking the screen size
-  const [isMobile, setMobile] = useState()
   useEffect(()=>{
+    console.log("Inside useEffect")
     checkMobile()
     window.addEventListener('resize', checkMobile)
     function checkMobile(){
       let windowWidth = window.innerWidth
       if(windowWidth<700){
-        setMobile(true)
+        dispatch(setScreenType(true))
       }
       if(windowWidth>700){
-        setMobile(false)
+        dispatch(setScreenType(false))
       }
     }
   },[isMobile])

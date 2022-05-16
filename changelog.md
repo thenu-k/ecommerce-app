@@ -3,3 +3,5 @@ Making emmet work inside js file------------------
 
 Making CSS autocomplete word inside styled-components---------------
     ctr+p => ext install styled-components.vscode-styled-components
+
+Adding redux toolkit as the state manager----------------
