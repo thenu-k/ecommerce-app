@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
-import HeaderLinks from './HeaderLinks';
+import HeaderLinks from '../HeaderLinks';
 import './MobileHeader.css' ;
-const Icon_userAccount = require( './../Assets/user-account.png')
-const Icon_cart = require('./../Assets/cart.png')
-const Icon_hamburger = require('./../Assets/hamburgerIcon.png')
+const Icon_userAccount = require( './../../Assets/user-account.png')
+const Icon_cart = require('./../../Assets/cart.png')
+const Icon_hamburger = require('./../../Assets/hamburgerIcon.png')
 
 
 const MobileHeader = () => {
