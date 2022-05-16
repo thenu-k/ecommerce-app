@@ -17,6 +17,21 @@ const items = [
         title: "Jeans",
         id: "1",
         img_url: ""
+    },
+    {
+        title: "Jeans",
+        id: "1",
+        img_url: ""
+    },
+    {
+        title: "Jeans",
+        id: "1",
+        img_url: ""
+    },
+    {
+        title: "Jeans",
+        id: "1",
+        img_url: ""
     }
 ]
 

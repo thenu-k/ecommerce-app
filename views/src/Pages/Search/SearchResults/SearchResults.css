@@ -1,9 +1,13 @@
 .searchresults.outer.container{
-    min-height: 500px;
-}
+    margin-top: 100px;
+    min-height: 500px; margin-bottom: 50px;
+    display: grid; grid-template-columns: repeat(4, 23vw);
+    grid-auto-rows: 30vw;
+    grid-gap: 1vw;
+} /*Break at 1000px*/
 
 /* Loading Icon */
-.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px;}
+.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; margin-top: 0;}
 .loader{
     margin-top: 100px; margin-left: -40px;
 }
