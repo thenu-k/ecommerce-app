@@ -12,7 +12,7 @@
       Language: NodeJS<br>
       Server: ExpressJS<br>
       Sessioning: Express-Session<br>
-      Auth: bCrypt<br><br>
+      Auth: bCrypt<br>
 
 ---
 To test the app, go to /views/ and /server/ and use npm install in both.

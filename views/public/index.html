@@ -11,60 +11,87 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root" aria-label="Body">
-      <div id="root" aria-label="Body">
-        <div class="gooey">
-          <span class="dot"></span>
-          <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+      <div class="loader">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
       </div>
       <style>
-        .gooey{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 142px;
-          height: 40px;
-          margin: -20px 0 0  -71px;    
+        body{
+          display: flex; align-items: center; justify-content: center;
         }
-        .gooey .dot{
-          position: absolute;
-          width: 16px;
-          height: 16px;
-          top: 12px;
-          left: 15px;
-          filter: blur(0px);
-          background: #000;
-          border-radius: 50%;
-          transform: translateX(0);
-          animation: dot 2.8s infinite;
-        }
-        .gooey .dots{
-          transform: translateX(0);
-          margin-top: 12px;
-          margin-left: 31px;
-          animation: dots 2.8s infinite;
-        }
-        .gooey .dots span{
-          display: block;
-          float: left;
-          width: 16px;
-          height: 16px;
-          margin-left: 16px;
-          filter: blur(0px);
-          background: #000;
-          border-radius: 50%;
-        }
-        @keyframes dot{
-          50%{transform: translateX(96px)}
-        }
-        @keyframes dots{
-          50%{transform: translateX(-31px)}
-        }
-      </style>
+        .loader {
+            width: 100px;
+            height: 100px;
+            position: relative;
+          }
+          
+          .item {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+          }
+          
+          .item-1 {
+            background-color:black;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          }
+          
+          .item-2 {
+            background-color: rgb(238, 238, 238);
+            top: 0;
+            right: 0;
+            animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          }
+          
+          .item-3 {
+            background-color: black;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          }
+          
+          .item-4 {
+            background-color: rgb(238, 238, 238);
+            bottom: 0;
+            left: 0;
+            animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+          }
+          
+          @keyframes item-1_move {
+            0%, 100% {transform: translate(0, 0)} 
+            25% {transform: translate(0, 50px)} 
+            50% {transform: translate(50px, 50px)} 
+            75% {transform: translate(50px, 0)} 
+          }
+          
+          @keyframes item-2_move {
+            0%, 100% {transform: translate(0, 0)} 
+            25% {transform: translate(-50px, 0)} 
+            50% {transform: translate(-50px, 50px)} 
+            75% {transform: translate(0, 50px)} 
+          }
+          
+          @keyframes item-3_move {
+            0%, 100% {transform: translate(0, 0)} 
+            25% {transform: translate(0, -50px)} 
+            50% {transform: translate(-50px, -50px)} 
+            75% {transform: translate(-50px, 0)} 
+          }
+          
+          @keyframes item-4_move {
+            0%, 100% {transform: translate(0, 0)} 
+            25% {transform: translate(50px, 0)} 
+            50% {transform: translate(50px, -50px)} 
+            75% {transform: translate(0, -50px)} 
+          }
+      
+    </style>
     </div>
   </body>
 </html>

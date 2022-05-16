@@ -7,7 +7,4 @@
 } /*Break at 1000px*/
 
 /* Loading Icon */
-.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; margin-top: 0;}
-.loader{
-    margin-top: 100px; margin-left: -40px;
-}
+.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: flex-start;}

@@ -3,55 +3,83 @@ import React from 'react'
 const LoadingIcon = () => {
   return (
     <>
-        <div className="loader"></div>
+        <div class="loader">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+        </div>
         <style>{`
             .loader {
-                width: 16px;
-                height: 16px;
-                box-shadow: 0 30px, 0 -30px;
-                border-radius: 4px;
-                background: currentColor;
-                display: block;
+                margin-top: 30px;
+                width: 100px;
+                height: 100px;
                 position: relative;
-                color: #FFF;
-                transform: translateY(30px);
-                box-sizing: border-box;
-                animation: animloader 2s ease infinite;
-            }
-            .loader::after,
-            .loader::before {
-                content: '';  
-                box-sizing: border-box;
-                width: 16px;
-                height: 16px;
-                box-shadow: 0 30px, 0 -30px;
-                border-radius: 4px;
-                background: currentColor;
-                color: #FFF;
+              }
+              
+              .item {
+                width: 50px;
+                height: 50px;
                 position: absolute;
-                left: 30px;
+              }
+              
+              .item-1 {
+                background-color:black;
                 top: 0;
-                animation: animloader 2s 0.2s ease infinite;
-            }
-            .loader::before {
-                animation-delay: 0.4s;
-                left: 60px;
-            }
-            
-            @keyframes animloader {
-                0% {
+                left: 0;
+                z-index: 1;
+                animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              }
+              
+              .item-2 {
+                background-color: rgb(238, 238, 238);
                 top: 0;
-                color: black;
-                }
-                50% {
-                top: 30px;
-                color: rgba(255, 255, 255, 0.2);
-                }
-                100% {
-                top: 0;
-                color: black;
-                }
-            }
+                right: 0;
+                animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              }
+              
+              .item-3 {
+                background-color: black;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              }
+              
+              .item-4 {
+                background-color: rgb(238, 238, 238);
+                bottom: 0;
+                left: 0;
+                animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              }
+              
+              @keyframes item-1_move {
+                0%, 100% {transform: translate(0, 0)} 
+                25% {transform: translate(0, 50px)} 
+                50% {transform: translate(50px, 50px)} 
+                75% {transform: translate(50px, 0)} 
+              }
+              
+              @keyframes item-2_move {
+                0%, 100% {transform: translate(0, 0)} 
+                25% {transform: translate(-50px, 0)} 
+                50% {transform: translate(-50px, 50px)} 
+                75% {transform: translate(0, 50px)} 
+              }
+              
+              @keyframes item-3_move {
+                0%, 100% {transform: translate(0, 0)} 
+                25% {transform: translate(0, -50px)} 
+                50% {transform: translate(-50px, -50px)} 
+                75% {transform: translate(-50px, 0)} 
+              }
+              
+              @keyframes item-4_move {
+                0%, 100% {transform: translate(0, 0)} 
+                25% {transform: translate(50px, 0)} 
+                50% {transform: translate(50px, -50px)} 
+                75% {transform: translate(0, -50px)} 
+              }
           
         `}</style>
     </>
