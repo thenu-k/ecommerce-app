@@ -3,7 +3,8 @@ import {createSlice} from "@reduxjs/toolkit"
 export const mainSlice = createSlice({
     name: "mainSlice",
     initialState:{
-        isMobile: null
+        isMobile: null,
+        cart: {}
     },
     reducers:{
         setScreenType: (state, action)=>{

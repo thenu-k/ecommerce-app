@@ -6,21 +6,20 @@ import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } f
 import Footer from '../Common/Footer';import Header from '../Common/Header';import MobileHeader from '../Common/MobileHeader'
 
 const Layout = () => {
-  console.log("I rendered")
-  //Redux state
+
+  //Redux state: Screen Size
   const {isMobile} = useSelector((state)=>state.isMobile)
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    console.log("Inside useEffect")
     checkMobile()
     window.addEventListener('resize', checkMobile)
     function checkMobile(){
       let windowWidth = window.innerWidth
-      if(windowWidth<700){
+      if(windowWidth<700 && isMobile!=true){
         dispatch(setScreenType(true))
       }
-      if(windowWidth>700){
+      if(windowWidth>700  && isMobile!=false){
         dispatch(setScreenType(false))
       }
     }
