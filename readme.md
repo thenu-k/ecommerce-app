@@ -5,7 +5,7 @@
 ## **Stack Used**
 
    **Frontend Framework**<br>
-      Frameword: Javascript<br>
+      Framework: React<br>
       State Management: Redux/MobX (haven't decided yet)<br>
       CSS: Vanilla CSS<br><br>
    **Backend**<br>
