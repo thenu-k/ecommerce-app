@@ -18,21 +18,6 @@ const items = [
         id: "1",
         img_url: "https://www.na-kd.com/resize/globalassets/nakd_shiny_high_cut_bikini_panty_1000-100823-0001_04.jpg?ref=B53DCBC292&quality=80&sharpen=0.3&width=714"
     },
-    {
-        title: "Jeans",
-        id: "1",
-        img_url: ""
-    },
-    {
-        title: "Jeans",
-        id: "1",
-        img_url: ""
-    },
-    {
-        title: "Jeans",
-        id: "1",
-        img_url: ""
-    }
 ]
 
 app.get('/test', async(req,res)=>{

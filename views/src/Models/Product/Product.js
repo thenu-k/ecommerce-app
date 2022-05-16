@@ -4,8 +4,8 @@ import './Product.css'
 
 const Product = (props) => {
   return (
-    <Link class="product outer wrap" to={'/product/'+props.item.id}>
-        <div class="product image outer center" style={{overflow: 'hidden'}}>
+    <Link className="product outer wrap" to={'/product/'+props.item.id}>
+        <div className="product image outer center" style={{overflow: 'hidden'}}>
           <img src={props.item.img_url} alt="" style={{height: 'auto', width: '100%'}}/>
         </div>
     </Link>

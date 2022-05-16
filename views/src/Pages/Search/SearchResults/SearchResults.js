@@ -21,7 +21,7 @@ const SearchResults = () => {
         results.loading ?
           <LoadingIcon/>
         :
-          results.map(item=>{return(<Product item={item}/>)})
+          results.map(item=>{return(<Product item={item} key={item.id}/>)})
       }
     </section>
 

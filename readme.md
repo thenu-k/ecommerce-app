@@ -6,7 +6,7 @@
 
    **Frontend Framework**<br>
       Framework: React<br>
-      State Management: Redux Toolkit
+      State Management: Redux Toolkit<br>
       CSS: Vanilla CSS<br><br>
    **Backend**<br>
       Language: NodeJS<br>

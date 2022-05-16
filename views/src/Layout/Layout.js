@@ -10,7 +10,6 @@ const Layout = () => {
   //Redux state: Screen Size
   const {isMobile} = useSelector((state)=>state.isMobile)
   const dispatch = useDispatch()
-
   useEffect(()=>{
     checkMobile()
     window.addEventListener('resize', checkMobile)
