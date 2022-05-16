@@ -7,4 +7,4 @@
 } /*Break at 1000px*/
 
 /* Loading Icon */
-.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: flex-start;}
+.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: center;}

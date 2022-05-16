@@ -1,11 +1,13 @@
 
 FrontEnd:
     ☐ Create account page
-    ☐ Make product page responsive:
+    ☐ Create item page
+    ☐ Make search page responsive:
         ☐ Search Bar
         ☐ Search Results
     ☐ Make footer responsivie
     ☐ Add an auth system
+    ☐ Create SignIn/Register component
     ✔ Add state management system @done 
 
     

@@ -3,83 +3,36 @@ import React from 'react'
 const LoadingIcon = () => {
   return (
     <>
-        <div class="loader">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
-        </div>
+        <span class="loader"></span>
         <style>{`
             .loader {
-                margin-top: 30px;
-                width: 100px;
-                height: 100px;
-                position: relative;
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              display: block;
+              margin:15px auto;
+              position: relative;
+              color: black;
+              box-sizing: border-box;
+              animation: animloader 1s linear infinite alternate;
+            }
+            
+            @keyframes animloader {
+              0% {
+                box-shadow: -38px -12px ,  -14px 0,  14px 0, 38px 0;
               }
-              
-              .item {
-                width: 50px;
-                height: 50px;
-                position: absolute;
+              33% {
+                box-shadow: -38px 0px, -14px -12px,  14px 0, 38px 0;
               }
-              
-              .item-1 {
-                background-color:black;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              66% {
+                box-shadow: -38px 0px , -14px 0, 14px -12px, 38px 0;
               }
-              
-              .item-2 {
-                background-color: rgb(238, 238, 238);
-                top: 0;
-                right: 0;
-                animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+              100% {
+                box-shadow: -38px 0 , -14px 0, 14px 0 , 38px -12px;
               }
-              
-              .item-3 {
-                background-color: black;
-                bottom: 0;
-                right: 0;
-                z-index: 1;
-                animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-              }
-              
-              .item-4 {
-                background-color: rgb(238, 238, 238);
-                bottom: 0;
-                left: 0;
-                animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
-              }
-              
-              @keyframes item-1_move {
-                0%, 100% {transform: translate(0, 0)} 
-                25% {transform: translate(0, 50px)} 
-                50% {transform: translate(50px, 50px)} 
-                75% {transform: translate(50px, 0)} 
-              }
-              
-              @keyframes item-2_move {
-                0%, 100% {transform: translate(0, 0)} 
-                25% {transform: translate(-50px, 0)} 
-                50% {transform: translate(-50px, 50px)} 
-                75% {transform: translate(0, 50px)} 
-              }
-              
-              @keyframes item-3_move {
-                0%, 100% {transform: translate(0, 0)} 
-                25% {transform: translate(0, -50px)} 
-                50% {transform: translate(-50px, -50px)} 
-                75% {transform: translate(-50px, 0)} 
-              }
-              
-              @keyframes item-4_move {
-                0%, 100% {transform: translate(0, 0)} 
-                25% {transform: translate(50px, 0)} 
-                50% {transform: translate(50px, -50px)} 
-                75% {transform: translate(0, -50px)} 
-              }
+            }
+            
+            
           
         `}</style>
     </>
