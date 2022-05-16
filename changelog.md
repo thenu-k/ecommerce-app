@@ -7,3 +7,6 @@ Making CSS autocomplete word inside styled-components---------------
 Adding redux toolkit as the state manager----------------
 
 To use git ssh, inside .git/config, changed the url to git@github.com:thenu-k/ecommerce-app.git
+
+Credentials component only appears when near the top of the DOM---
+    Why?

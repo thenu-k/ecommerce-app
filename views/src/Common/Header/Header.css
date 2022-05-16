@@ -36,9 +36,9 @@ nav ul a:hover{border-bottom: 2px solid black}
     outline: 0; border: 0;
     cursor: pointer;
 }
-.header.action_list.outer button:focus{
+/* .header.action_list.outer button:focus{
     outline: black 2px solid;
-}
+} */
 .header.action_list.outer img{
     height: 30px; width: auto;
 }
