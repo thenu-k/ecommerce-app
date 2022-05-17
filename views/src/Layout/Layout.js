@@ -4,13 +4,11 @@ import { Outlet, Link } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } from '../StateManager/mainSlice';
 //Components
 import Footer from '../Common/Footer/Footer.js';import Header from '../Common/Header/Header.js';import MobileHeader from '../Common/MobileHeader/MobileHeader.js'
-import Credentials from '../Common/Credentials/Credentials';
 
 const Layout = () => {
 
   //Redux states
   const {isMobile} = useSelector((state)=>state.isMobile)
-  const {displayCredentials} = useSelector((state)=> state.displayCredentials)
   const dispatch = useDispatch()
 
   //Screen Size
@@ -33,16 +31,11 @@ const Layout = () => {
       {
         isMobile 
           ?    <MobileHeader/>
-          :    <Header/>
+          :    <Header isMobile={isMobile}/>
       }
       <div style={{ height: '65px'}}></div> {/*Padding Element*/}
       <Outlet/>
       <Footer/>
-      {
-        (isMobile===false && displayCredentials===true) 
-          ?    <Credentials/>
-          :    <></>
-      }
     </>
   )
 }

@@ -36,6 +36,11 @@ const Register = () => {
               <input type="password" onChange={e => permanentlyMove(e)}/>
               <label  for="Password(Register)-Re-enter"onClick={(e)=>focusInput(e)}>Re enter Password</label>
             </div>
+            
+            <p className='termsConditions regsiter'>By clicking next, you agree to our terms and conditions. Blah, blah random corporate speak.</p>
+
+            <button type='submit' className='next last'>Next</button>
+            <button className='login last'>Login</button>
           </form>
       </div>
     </>

@@ -2,9 +2,10 @@ import {React, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import './Header.css' ;
 import HeaderLinks from '../HeaderLinks';
+import Credentials from '../Credentials/Credentials';
 
 //Redux
-import {useDispatch} from 'react-redux'; import { toggleCredentials } from '../../StateManager/mainSlice';
+import {useDispatch, useSelector} from 'react-redux'; import { toggleCredentials } from '../../StateManager/mainSlice';
 
 //Icons
 const Icon_userAccount = require( './../../Assets/user-account.png')
@@ -14,6 +15,11 @@ const Icon_logo = require('./../../Assets/logo.png')
 
 const Header = (props) => {
   const dispatch = useDispatch()
+  const {displayCredentials} = useSelector((state)=> state.displayCredentials)
+
+  //Re-rendering header on sign in click
+  useEffect(()=>{},[displayCredentials])
+
   return (
     <>
     <header aria-label='Header'>
@@ -33,6 +39,12 @@ const Header = (props) => {
         </nav>
       </header>
 
+      {/* Credentials page */}
+      {
+        (props.isMobile===false && displayCredentials===true) 
+          ?    <Credentials/>
+          :    <></>
+      }
       </>
   )
 }
