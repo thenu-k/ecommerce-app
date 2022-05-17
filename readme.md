@@ -15,37 +15,36 @@
       Sessioning: Express-Session<br>
       Auth: bCrypt<br><br>
 
-## **Frontend Main File Structure**
+## **Frontend Main Files**
 ```
    |-Views/
-   |
-   |---Public/
-   |
-   |---Src/
-   |      |---Assets/
-   |      |---Auth/
-   |      |---Layout/
-   |      |---Common/   
-   |      |         |---Header/
-   |      |         |---Footer/
-   |      |         |---MobileHeader/
-   |      |         |---Credentials/
+   |      |---Public/
    |      |
-   |      |---Models/
-   |      |         |---LoadingIcon/
-   |      |         |---Product/
-   |      | 
-   |      |---Pages/
-   |      |        |---Home/
-   |      |        |---Search/
-   |      |        |---Item/
-   |      |        |---Account/
-   |      |        |---404/
-   |      | 
-   |      |---StateManager/
-   |      | 
-   |      |---App.js
-   |      |---Index.js
+   |      |---Src/
+   |             |---Assets/
+   |             |---Auth/
+   |             |---Layout/
+   |             |---Common/   
+   |             |         |---Header/
+   |             |         |---Footer/
+   |             |         |---MobileHeader/
+   |             |         |---Credentials/
+   |             |
+   |             |---Models/
+   |             |         |---LoadingIcon/
+   |             |         |---Product/
+   |             | 
+   |             |---Pages/
+   |             |        |---Home/
+   |             |        |---Search/
+   |             |        |---Item/
+   |             |        |---Account/
+   |             |        |---404/
+   |             | 
+   |             |---StateManager/
+   |             | 
+   |             |---App.js
+   |             |---Index.js
 ```  
 
 ---
