@@ -23,9 +23,9 @@
         grid-auto-rows: 50vw;
     }
 }
-@media all and (max-width: 450px){
+@media all and (max-width: 600px){
     .searchresults.outer.container{
         grid-template-columns: repeat(1, 90vw);
-        grid-auto-rows: 100vw;
+        grid-auto-rows: 100vw;  /*Add max values*/
     }
 }
