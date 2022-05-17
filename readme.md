@@ -4,7 +4,7 @@
 
 ## **Stack Used**
 
-   **Frontend Framework**<br>
+   **Frontend**<br>
       Framework: React<br>
       State Management: Redux Toolkit<br>
       CSS: Vanilla CSS<br><br>

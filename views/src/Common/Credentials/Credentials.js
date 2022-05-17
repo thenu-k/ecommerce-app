@@ -31,7 +31,7 @@ const Credentials = () => {
         <section className="credentials inner container">
           <div className="credentials heading">
             <h3>Login or Create an Account</h3>
-            <button onClick={()=> dispatch(toggleCredentials(false))}> <div class="closeIcon outer credentials"><img src={Icon_close} alt=""/></div> </button>
+            <button onClick={()=> dispatch(toggleCredentials(false))}> <div className="closeIcon outer credentials"><img src={Icon_close} alt=""/></div> </button>
           </div>
           {
             isRegister
