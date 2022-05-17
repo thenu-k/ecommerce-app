@@ -3,7 +3,7 @@ import {createSlice} from "@reduxjs/toolkit"
 export const mainSlice = createSlice({
     name: "mainSlice",
     initialState:{
-        isMobile: false,
+        isMobile: null,
         cart: false,
         displayCredentials:false,
 

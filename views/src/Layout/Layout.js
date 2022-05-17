@@ -6,52 +6,34 @@ import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } f
 import Footer from '../Common/Footer/Footer.js';import Header from '../Common/Header/Header.js';import MobileHeader from '../Common/MobileHeader/MobileHeader.js'
 
 const Layout = () => {
-
+  console.log("Inside component")
   //Redux states
   const {isMobile} = useSelector((state)=>state.isMobile)
   const dispatch = useDispatch()
-  console.log("Inside component===========")
-  // console.log(isMobile)
-  // document.addEventListener('click', ()=> console.log("Yo"))
   
-  // window.addEventListener('click', yo)
-  // useEffect(()=>{ dispatch(setScreenType(true)) ;}, [])
-  // useState(()=>{})
+  function checkMobile(){
+    const screenWidth = window.innerWidth
+    if(screenWidth<700 && isMobile!=true){dispatch(setScreenType(true)); window.removeEventListener('resize', checkMobile)}
+    if(screenWidth>700 && isMobile!=false){dispatch(setScreenType(false)); window.removeEventListener('resize', checkMobile)}
+  }
 
-  // function yo(){
-  //   console.log(yo)
-  // }
-  //window.addEventListener('resize',()=>{console.log("Inside event listener");console.log(count); checkMobile(isMobile)})     ///There's our problem! isMobile doesn't exist inside of the event listener
-
-  //Screen Size
-  // function checkMobile(isMobile){
-  //   console.log("Called component function")
-  //   console.log(isMobile)
-  //   let windowWidth = window.innerWidth
-  //   if(windowWidth<700 && isMobile!=true){dispatch(setScreenType(true))}
-  //   if(windowWidth>700 && isMobile!=false){console.log("Dispatch sent");dispatch(setScreenType(false))}
-  // }
-
-  // useEffect(()=>{console.log("Inside useEffect");},[])
-  //useEffect(()=>{console.log("Inside initial useEffect");   window.addEventListener('click', ()=> console.log(isMobile));dispatch(setScreenType(false)) })   //Only on the first render.
-  //useEffect(()=>{console.log("Inside latter useEffect"); window.addEventListener('resize',()=>{console.log("Inside event listener");console.log(isMobile); })})     //We don't need to add dependecies as checkMobile will auto re-render the component 
-
-  const [count, setCount] = useState(0)
-  console.log("Actual count: "+count)
-  window.addEventListener('click', ()=> console.log('event listener: '+ count))
+  //Checks
+  useEffect(()=>{console.log("Inside init"); checkMobile()},[])
+  useEffect(()=>{
+    window.addEventListener('resize', checkMobile)
+  })
   
   return (
-    // <>
-    //   {
-    //     isMobile 
-    //       ?    <MobileHeader/>
-    //       :    <Header isMobile={isMobile}/>
-    //   }
-    //   <div style={{ height: '65px'}}></div> {/*Padding Element*/}
-    //   <Outlet/>
-    //   <Footer/>
-    // </>
-    <button onClick={()=>{if(count===0){setCount(1)}else{setCount(0)}}}>Click me</button>
+    <>
+      {
+        isMobile 
+          ?    <MobileHeader/>
+          :    <Header isMobile={isMobile}/>
+      }
+      <div style={{ height: '65px'}}></div> {/*Padding Element*/}
+      <Outlet/>
+      <Footer/>
+    </>
   )
 }
 
