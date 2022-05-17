@@ -1,6 +1,6 @@
 import React from 'react'
 import './Large.css'
-const Image_large1 = require('../../Assets/large1.jpg')
+const Image_large1 = require('../../../Assets/large1.jpg')
 
 const Large1 = () => {
   return (

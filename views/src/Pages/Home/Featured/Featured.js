@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Featured.css'
-const Image_featured1 = require('../../Assets/featured1.jpg')
-const Image_featured2 = require('../../Assets/featured2.jpg')
-const Image_featured3 = require('../../Assets/featured3.jpg')
-const Image_featured4 = require('../../Assets/featured4.jpg')
+const Image_featured1 = require('../../../Assets/featured1.jpg')
+const Image_featured2 = require('../../../Assets/featured2.jpg')
+const Image_featured3 = require('../../../Assets/featured3.jpg')
+const Image_featured4 = require('../../../Assets/featured4.jpg')
 
 
 const Featured = () => {

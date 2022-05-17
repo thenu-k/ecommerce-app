@@ -1,8 +1,8 @@
 import {React, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import './Collections.css'
-const Image_forHim = require('../../Assets/forHim.jpg')
-const Image_forHer = require('../../Assets/forHer.jpg')
+const Image_forHim = require('../../../Assets/forHim.jpg')
+const Image_forHer = require('../../../Assets/forHer.jpg')
 
 const Collections = () => {
     useEffect(()=>{
