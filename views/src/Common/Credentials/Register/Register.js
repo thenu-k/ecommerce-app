@@ -7,6 +7,17 @@ const Register = () => {
   const focusInput = (e) => {
     e.target.closest('.form-element').querySelector('input').focus()
   }
+  //Permanently move label
+  const permanentlyMove = (e) => {
+    console.log('Hmm?')
+    const label_element = e.target.closest('.form-element').querySelector('label')
+    if(e.target.value!=''){
+      label_element.classList.add('move')
+    }
+    if(e.target.value==='' && label_element.classList.contains('move')){
+      label_element.classList.remove('move')
+    }
+  }
 
   return (
     <>
@@ -14,15 +25,15 @@ const Register = () => {
           <h4>Create an Account</h4>
           <form className="register">
             <div className="email register  form-element">
-              <input type="text" autoComplete='email'/>
+              <input type="text" autoComplete='email'  onChange={e => permanentlyMove(e)}/>
               <label for="Email(Register)"onClick={(e)=>focusInput(e)}>E-mail</label>
             </div>
             <div className="password register  form-element">
-              <input type="text"/>
+              <input type="password" onChange={e => permanentlyMove(e)}/>
               <label for="Password(Register)"onClick={(e)=>focusInput(e)}>Password</label>
             </div>
             <div className="password-reenter register  form-element">
-              <input type="text"/>
+              <input type="password" onChange={e => permanentlyMove(e)}/>
               <label  for="Password(Register)-Re-enter"onClick={(e)=>focusInput(e)}>Re enter Password</label>
             </div>
           </form>
