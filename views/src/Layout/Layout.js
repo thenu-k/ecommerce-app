@@ -9,22 +9,24 @@ const Layout = () => {
 
   //Redux states
   const {isMobile} = useSelector((state)=>state.isMobile)
+  const [count, setCount] = useState(5)
   const dispatch = useDispatch()
+  console.log("Inside component===========")
+  console.log(isMobile)
+
+  //window.addEventListener('resize',()=>{console.log("Inside event listener");console.log(count); checkMobile(isMobile)})     ///There's our problem! isMobile doesn't exist inside of the event listener
 
   //Screen Size
-  useEffect(()=>{
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    function checkMobile(){
-      let windowWidth = window.innerWidth
-      if(windowWidth<700 && isMobile!=true){
-        dispatch(setScreenType(true))
-      }
-      if(windowWidth>700  && isMobile!=false){
-        dispatch(setScreenType(false))
-      }
-    }
-  },[isMobile])
+  function checkMobile(isMobile){
+    console.log("Called component function")
+    console.log(isMobile)
+    let windowWidth = window.innerWidth
+    if(windowWidth<700 && isMobile!=true){dispatch(setScreenType(true))}
+    if(windowWidth>700 && isMobile!=false){console.log("Dispatch sent");dispatch(setScreenType(false))}
+  }
+
+  useEffect(()=>{console.log("Inside latter useEffect"); window.addEventListener('resize',()=>{console.log("Inside event listener");console.log(isMobile); checkMobile(isMobile)})})     //We don't need to add dependecies as checkMobile will auto re-render the component
+  useEffect(()=>{console.log("Inside initial useEffect"); console.log(isMobile);checkMobile()},[])   //Only on the first render. 
 
   return (
     <>
@@ -42,3 +44,6 @@ const Layout = () => {
 
 
 export default Layout
+
+
+//Eureka! redux states cannot be called up inside useEffect!!!
