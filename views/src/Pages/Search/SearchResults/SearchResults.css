@@ -8,3 +8,24 @@
 
 /* Loading Icon */
 .searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: center;}
+
+
+/* Alt screens */
+@media all and (max-width: 1200px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(3, 30vw);
+        grid-auto-rows: 40vw;
+    }
+}
+@media all and (max-width: 800px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(2, 40vw);
+        grid-auto-rows: 50vw;
+    }
+}
+@media all and (max-width: 450px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(1, 90vw);
+        grid-auto-rows: 100vw;
+    }
+}

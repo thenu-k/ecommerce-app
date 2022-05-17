@@ -22,6 +22,21 @@ const items = [
         id: "1",
         img_url: "https://www.na-kd.com/resize/globalassets/nakd_shiny_high_cut_bikini_panty_1000-100823-0001_04.jpg?ref=B53DCBC292&quality=80&sharpen=0.3&width=714"
     },
+    {
+        title: "Name",
+        id: '3',
+        img_url: "https://media.nastygal.com/i/nastygal/agg14959_gold_xl?w=675&qlt=default&fmt.jp2.qlt=70&fmt=auto"
+    },
+    {
+        title: "Name",
+        id: '4',
+        img_url: "https://media.nastygal.com/i/nastygal/bgg04886_multi_xl?w=675&qlt=default&fmt.jp2.qlt=70&fmt=auto"
+    },
+    {
+        title: 'Name',
+        id: '5',
+        img_url: 'https://media.nastygal.com/i/nastygal/agg17099_black_xl?w=675&qlt=default&fmt.jp2.qlt=70&fmt=auto'
+    }
 ]
 
 let registeredUsers = []
