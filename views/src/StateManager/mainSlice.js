@@ -4,8 +4,13 @@ export const mainSlice = createSlice({
     name: "mainSlice",
     initialState:{
         isMobile: null,
-        cart: {},
-        displayCredentials:false
+        cart: false,
+        displayCredentials:false,
+
+        //Metadata
+        metaInfo: {
+            registerUserURL : 'http://localhost/registerUser'
+        }
     },
     reducers:{
         setScreenType: (state, action)=>{
@@ -17,7 +22,7 @@ export const mainSlice = createSlice({
             state.displayCredentials
                 ? state.displayCredentials = false
                 : state.displayCredentials = true
-        }
+        },
     }
 })
 

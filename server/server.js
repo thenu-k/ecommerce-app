@@ -3,9 +3,13 @@ const session = require('express-session')
 const cors = require('cors')
 const app = express()
 const PORT = 80
+const body_parser = require('body-parser')
+const json_parser = body_parser.json()
 
 app.listen(PORT, ()=>{console.log(`E-Commerce Server running on port ${PORT}`)})
 app.use(cors())
+
+
 
 const items = [
     {
@@ -20,7 +24,16 @@ const items = [
     },
 ]
 
+let registeredUsers = []
+
 app.get('/test', async(req,res)=>{
     console.log("Sending test data")
     setTimeout(()=>{res.send(items)}, 1500)
+})
+
+
+app.post('/registerUser',json_parser, async(req, res)=>{
+    console.log("Received registration request")
+    registeredUsers.push(req.body)
+    console.log(registeredUsers)
 })
