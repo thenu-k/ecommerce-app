@@ -9,6 +9,7 @@ const Icon_hamburger = require('./../../Assets/hamburgerIcon.png')
 
 const MobileHeader = () => {
   const [menuVisible, setMenuVisible] = useState('notVisible')
+
   useEffect(() => {
     //Menu click out to close
     const click_area = document.querySelector('header.mobile .links.outer .clickable')
@@ -17,11 +18,11 @@ const MobileHeader = () => {
     })
   }, [])   //Important. We only need the event listener on the first time. Otherwise there will be multiple. We don't need to remove this event listener as no state is REQUIRED by the function. It will only set the state.
 
-
   function makeVisible(){
     if(menuVisible==='notVisible'){setMenuVisible('visible')}
     if(menuVisible==='visible'){setMenuVisible('notVisible')}
   }
+  
   return (
     <header className='mobile header outer' aria-label='Header'>
         <nav>

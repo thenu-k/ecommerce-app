@@ -3,7 +3,7 @@
     width: 100%; height: 50px;
     display: flex; 
     align-items: center; 
-    position: fixed; top: 65px; z-index: 999;  /*Height of header*/
+    position: fixed; top: 65px;   /*Height of header* z-index: 999;*/
     background-color: #fff;
 }
 
@@ -24,11 +24,11 @@
 @media all and (max-width: 900px){
     .searchbar.container.outer{
         flex-direction: column-reverse;
-        height: 70px;
+        height: auto;
         align-items: center;
     }
     .searchbar.container.outer form{
-        width: 90%;
+        width: 90%; display: flex; align-items: center; justify-content: center;
     }
     .searchbar.container.outer form input.searchbar.input{
         width:95%;
@@ -36,6 +36,7 @@
 
     .searchbar.container.outer .search_query{
         margin: 10px 0;
+        margin-left: 0;
         text-align: center;
     }
 }
