@@ -15,7 +15,7 @@
       Sessioning: Express-Session<br>
       Auth: bCrypt<br><br>
 
-## **Frontend Main Files**
+## **Frontend Folder Structure**
 ```
    |-Views/
    |      |---Public/
@@ -32,6 +32,7 @@
    |             |
    |             |---Models/
    |             |         |---LoadingIcon/
+   |             |         |---LoadingScreen/
    |             |         |---Product/
    |             | 
    |             |---Pages/
