@@ -7,7 +7,7 @@ const SearchResults = () => {
 
   //States
   const [results, setResults] = useState({loading: true})
-  const url = 'http://localhost:80/test'
+  const url = 'http://thenu-kal.com/test'
 
   // Making the api call
   useEffect(()=>{getData(url)}, []) 
