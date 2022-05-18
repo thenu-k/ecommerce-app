@@ -47,6 +47,7 @@ app.get('/test', async(req,res)=>{
 })
 
 
+
 app.post('/registerUser',json_parser, async(req, res)=>{
     console.log("Received registration request")
     registeredUsers.push(req.body)
