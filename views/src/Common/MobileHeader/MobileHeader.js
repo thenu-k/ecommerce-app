@@ -15,7 +15,9 @@ const MobileHeader = () => {
     click_area.addEventListener('click', ()=>{
       setMenuVisible('notVisible')
     })
-  }, [menuVisible])   //Important
+  }, [])   //Important. We only need the event listener on the first time. Otherwise there will be multiple. We don't need to remove this event listener as no state is REQUIRED by the function. It will only set the state.
+
+
   function makeVisible(){
     if(menuVisible==='notVisible'){setMenuVisible('visible')}
     if(menuVisible==='visible'){setMenuVisible('notVisible')}

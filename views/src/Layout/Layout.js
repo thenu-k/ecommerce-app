@@ -6,22 +6,19 @@ import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } f
 import Footer from '../Common/Footer/Footer.js';import Header from '../Common/Header/Header.js';import MobileHeader from '../Common/MobileHeader/MobileHeader.js'
 
 const Layout = () => {
-  console.log("Inside component")
   //Redux states
   const {isMobile} = useSelector((state)=>state.isMobile)
   const dispatch = useDispatch()
   
   function checkMobile(){
     const screenWidth = window.innerWidth
-    if(screenWidth<700 && isMobile!=true){dispatch(setScreenType(true)); window.removeEventListener('resize', checkMobile)}
+    if(screenWidth<700 && isMobile!=true){dispatch(setScreenType(true)); window.removeEventListener('resize', checkMobile)}   //Remove the event listener to prevent STATE FREEZE.
     if(screenWidth>700 && isMobile!=false){dispatch(setScreenType(false)); window.removeEventListener('resize', checkMobile)}
   }
 
   //Checks
-  useEffect(()=>{console.log("Inside init"); checkMobile()},[])
-  useEffect(()=>{
-    window.addEventListener('resize', checkMobile)
-  })
+  useEffect(()=>{window.addEventListener('resize', checkMobile)})  //Every render                                     //The order matters!!! Line 21 will remove the event un-required event listener on the page.
+  useEffect(()=>{checkMobile()},[])     //First time only                                                             //On the first run, the function will remove an event listener that doesn't exist. But that's ok(?).
   
   return (
     <>
