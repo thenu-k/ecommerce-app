@@ -23,12 +23,18 @@ const SignIn = () => {
     //   label_element.classList.remove('move')
     // }
   }
+
+  //Login function
+  const Login = (e) => {
+    e.target.preventDefault();
+  }
+
   return (
     <>
       <div class="login register_login outer">
         <h4>Login</h4>
 
-        <form action="" class="login register_login">
+        <form action="" class="login register_login" onSubmit={(e)=>{Login(e)}}>
           <div class="email login register_login form-element">
             <input type="text" autocomplete='email' onChange={(e)=>checkChange(e)}/>
             <label for="Email(login)" onClick={(e)=>clickedLabel(e)}>E-mail</label>

@@ -12,8 +12,8 @@ const Layout = () => {
   
   function checkMobile(){
     const screenWidth = window.innerWidth
-    if(screenWidth<700 && isMobile!=true){dispatch(setScreenType(true)); window.removeEventListener('resize', checkMobile)}   //Remove the event listener to prevent STATE FREEZE.
-    if(screenWidth>700 && isMobile!=false){dispatch(setScreenType(false)); window.removeEventListener('resize', checkMobile)}
+    if(screenWidth<700 && isMobile!==true){dispatch(setScreenType(true)); window.removeEventListener('resize', checkMobile)}   //Remove the event listener to prevent STATE FREEZE.
+    if(screenWidth>700 && isMobile!==false){dispatch(setScreenType(false)); window.removeEventListener('resize', checkMobile)}
   }
 
   //Checks
