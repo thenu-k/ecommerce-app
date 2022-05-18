@@ -21,9 +21,9 @@ const Register = () => {
     if(e.target.value!=''){
       label_element.classList.add('move')
     }
-    if(e.target.value==='' && label_element.classList.contains('move')){
-      label_element.classList.remove('move')
-    }
+    // if(e.target.value==='' && label_element.classList.contains('move')){
+    //   label_element.classList.remove('move')
+    // }
   }
 
   //Register user function

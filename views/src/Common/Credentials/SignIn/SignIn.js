@@ -14,13 +14,14 @@ const SignIn = () => {
 
   //Input value changed 
   const checkChange = (e) => {
+    console.log("Change!")
     const label_element = e.target.closest('.form-element').querySelector('label')
     if(e.target.value!=''){
       label_element.classList.add('move')
     }
-    if(e.target.value==='' && label_element.classList.contains('move')){
-      label_element.classList.remove('move')
-    }
+    // if(e.target.value==='' && label_element.classList.contains('move')){
+    //   label_element.classList.remove('move')
+    // }
   }
   return (
     <>
