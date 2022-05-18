@@ -8,6 +8,7 @@ FrontEnd:
     ☐ Make footer responsivie
     ☐ Add an auth system
     ☐ Create SignIn/Register component
+        ✔ Create Register component @done 
     ☐ Fix search bar center bug
     ✔ Add state management system @done 
 
