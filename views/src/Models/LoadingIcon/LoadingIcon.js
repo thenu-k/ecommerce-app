@@ -3,7 +3,7 @@ import React from 'react'
 const LoadingIcon = () => {
   return (
     <>
-        <span class="loader"></span>
+        <span className="loader"></span>
         <style>{`
             .loader {
               width: 12px;
