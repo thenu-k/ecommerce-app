@@ -1,4 +1,5 @@
 import React from 'react'
+import './SignIn.css'
 
 //Redux
 import { useSelector, useDispatch } from 'react-redux'; import { setIsRegister } from '../../../StateManager/mainSlice';
