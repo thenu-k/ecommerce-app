@@ -13,8 +13,9 @@ header.mobile nav{
 header.mobile nav>div{width: 100%;}
 
 header.mobile .logo.outer{
-    width: 50%;
+    width: auto;
     margin-right: 0;
+    margin-left: 0;
 }
 
 
