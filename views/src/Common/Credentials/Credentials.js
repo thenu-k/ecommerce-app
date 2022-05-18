@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import './Credentials.css'
 import SignIn from './SignIn/SignIn.js'; import Register from './Register/Register.js'
+
+//Redux
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleCredentials } from '../../StateManager/mainSlice';
 
@@ -9,10 +11,11 @@ const Icon_close = require('../../Assets/closeIcon.png')
 
 const Credentials = () => {
   
-  //Register or Login?
-  const [isRegister, setIsRegister] = useState(true)
+  //Register or Login? [Redux]
+  const {isRegister} = useSelector((state)=> state.isRegister)
+  console.log(isRegister)
 
-  //Redux
+  // Display this page? [Redux]
   const dispatch = useDispatch()
   const {displayCredentials} = useSelector(state => state.displayCredentials)
 

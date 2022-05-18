@@ -10,7 +10,10 @@ export const mainSlice = createSlice({
         //Metadata
         metaInfo: {
             registerUserURL : 'http://localhost/registerUser'
-        }
+        },
+
+        //Login or register
+        isRegister: true
     },
     reducers:{
         setScreenType: (state, action)=>{
@@ -23,9 +26,14 @@ export const mainSlice = createSlice({
                 ? state.displayCredentials = false
                 : state.displayCredentials = true
         },
+        setIsRegister: (state, action)=>{
+            action.payload
+                ?   state.isRegister = true
+                :   state.isRegister = false
+        }
     }
 })
 
 //Exports
-export const {setScreenType, toggleCredentials} = mainSlice.actions
+export const {setScreenType, toggleCredentials, setIsRegister} = mainSlice.actions
 export default mainSlice.reducer;

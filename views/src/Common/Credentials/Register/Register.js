@@ -2,10 +2,13 @@ import React, {useEffect, useState} from 'react'
 import './Register.css'
 
 //Redux
-import {useSelector} from 'react-redux'; 
-
+import {useDispatch, useSelector} from 'react-redux'; 
+import {setIsRegister} from '../../../StateManager/mainSlice'
 
 const Register = () => {
+
+  //User wants to register or login?
+  const dispatch = useDispatch()
 
   //Focus nearest input
   const focusInput = (e) => {
@@ -13,7 +16,7 @@ const Register = () => {
   }
 
   //Permanently move label
-  const permanentlyMove = (e) => {
+  const checkMove = (e) => {
     const label_element = e.target.closest('.form-element').querySelector('label')
     if(e.target.value!=''){
       label_element.classList.add('move')
@@ -48,24 +51,24 @@ const Register = () => {
 
           <form className="register" onSubmit={(e)=>registerUser(e)}>
             <div className="email register  form-element">
-              <input type="text" autoComplete='email'  onChange={e => permanentlyMove(e)}/>
+              <input type="text" autoComplete='email'  onChange={e => checkMove(e)}/>
               <label for="Email(Register)"onClick={(e)=>focusInput(e)}>E-mail</label>
             </div>
             <div className="password register  form-element">
-              <input type="password" onChange={e => permanentlyMove(e)}/>
+              <input type="password" onChange={e => checkMove(e)}/>
               <label for="Password(Register)"onClick={(e)=>focusInput(e)}>Password</label>
             </div>
             <div className="password-reenter register  form-element">
-              <input type="password" onChange={e => permanentlyMove(e)}/>
+              <input type="password" onChange={e => checkMove(e)}/>
               <label  for="Password(Register)-Re-enter"onClick={(e)=>focusInput(e)}>Re enter Password</label>
             </div>
             
-            <p className='termsConditions regsiter'>By clicking next, you agree to our terms and conditions. Blah, blah random corporate speak.</p>
+            <p className='termsConditions regsiter'>By clicking next, you agree to our terms and conditions. You also agree to sell your soul.</p>
 
             <button type='submit' className='next last'>Next</button>
           </form>
 
-          <button className='login last'>Login Instead</button>
+          <button className='login last' onClick={()=> dispatch(setIsRegister(false))}>Login Instead</button>
       </div>
     </>
   )
