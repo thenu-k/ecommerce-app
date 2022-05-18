@@ -13,7 +13,6 @@ const Credentials = () => {
   
   //Register or Login? [Redux]
   const {isRegister} = useSelector((state)=> state.isRegister)
-  console.log(isRegister)
 
   // Display this page? [Redux]
   const dispatch = useDispatch()

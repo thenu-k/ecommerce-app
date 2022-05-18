@@ -46,19 +46,19 @@ const Register = () => {
 
   return (
     <>
-      <div className="register outer">
+      <div className="register outer register_login">
           <h4>Create an Account</h4>
 
-          <form className="register" onSubmit={(e)=>registerUser(e)}>
-            <div className="email register  form-element">
+          <form className="register register_login" onSubmit={(e)=>registerUser(e)}>
+            <div className="email register register_login  form-element">
               <input type="text" autoComplete='email'  onChange={e => checkMove(e)}/>
               <label for="Email(Register)"onClick={(e)=>focusInput(e)}>E-mail</label>
             </div>
-            <div className="password register  form-element">
+            <div className="password register register_login  form-element">
               <input type="password" onChange={e => checkMove(e)}/>
               <label for="Password(Register)"onClick={(e)=>focusInput(e)}>Password</label>
             </div>
-            <div className="password-reenter register  form-element">
+            <div className="password-reenter register register_login  form-element">
               <input type="password" onChange={e => checkMove(e)}/>
               <label  for="Password(Register)-Re-enter"onClick={(e)=>focusInput(e)}>Re enter Password</label>
             </div>
