@@ -11,7 +11,7 @@ app.use(cors())
 
 
 
-const items = [
+const items1 = [
     {
         title: "Jacket",
         id: "0",
@@ -22,6 +22,9 @@ const items = [
         id: "1",
         img_url: "https://www.na-kd.com/resize/globalassets/nakd_shiny_high_cut_bikini_panty_1000-100823-0001_04.jpg?ref=B53DCBC292&quality=80&sharpen=0.3&width=714"
     },
+]
+
+const items2 = [
     {
         title: "Name",
         id: '3',
@@ -39,13 +42,18 @@ const items = [
     }
 ]
 
+
 let registeredUsers = []
 
-app.get('/test', async(req,res)=>{
-    console.log("Sending test data")
-    setTimeout(()=>{res.send(items)}, 1500)
+app.get('/popular', async(req,res)=>{
+    console.log("Sending popular data")
+    setTimeout(()=>{res.send(items1)}, 1500)
 })
 
+app.get('/new', async(req,res)=>{
+    console.log("Sending new data")
+    setTimeout(()=>{res.send(items2)}, 1500)
+})
 
 
 app.post('/registerUser',json_parser, async(req, res)=>{
