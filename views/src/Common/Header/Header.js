@@ -12,6 +12,9 @@ const Icon_userAccount = require( './../../Assets/user-account.png')
 const Icon_cart = require('./../../Assets/cart.png')
 const Icon_logo = require('./../../Assets/logo.png')
 
+//Types
+
+
 
 const Header = (props) => {
   const dispatch = useDispatch()
