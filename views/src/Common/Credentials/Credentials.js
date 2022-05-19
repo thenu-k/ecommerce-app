@@ -22,7 +22,7 @@ const Credentials = () => {
 
   //Remove Credentials page on outer click
   useEffect(()=>{
-    document.querySelector('.credentials.outer.container')?.addEventListener('click', (e)=>{
+    document.querySelector('.credentials.outer.container').addEventListener('click', (e)=>{   
       if(e.target===document.querySelector('.container.outer.credentials')){
         dispatch(toggleCredentials(false))
       }
