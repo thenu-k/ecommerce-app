@@ -4,3 +4,5 @@
 notes.md
 /views/build
 changelog.md
+
+/views-ts/node_modules
