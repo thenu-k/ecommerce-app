@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Outlet, Link } from 'react-router-dom'
 //Redux
 import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } from '../StateManager/mainSlice';
+
 //Components
 import Footer from '../Common/Footer/Footer.js';import Header from '../Common/Header/Header.js';import MobileHeader from '../Common/MobileHeader/MobileHeader.js'
 
