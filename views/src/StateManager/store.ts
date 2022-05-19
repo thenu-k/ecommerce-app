@@ -4,6 +4,8 @@ import displayCredentials from './mainSlice'
 import metaInfo from './mainSlice'
 import isRegister from './mainSlice'
 
+//Store type
+
 export default configureStore({
     reducer: {
        isMobile: isMobile,
