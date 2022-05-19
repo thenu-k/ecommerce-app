@@ -1,0 +1,50 @@
+
+.landing.image.outer{
+    width: 100%; max-height: 1000px; min-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+.landing.image.outer img{
+    width: 1600px;
+    position: absolute;  z-index: 9;
+    transform: translateY(10%)
+}
+
+.landing.text.outer{
+    height: 100%;
+    position: absolute;
+    left: 0; z-index: 99;
+    display:flex; justify-content: center; align-items: center;
+    flex-direction: column;
+}
+
+.landing.text.outer h2{
+    font-size: 3em; color: white; display: none;
+}
+
+
+/* Alt screens */
+@media all and (min-width: 1700px){
+    .landing.image.outer img{
+        width: 1980px;
+        position: absolute;
+        transform: translateY(10%)
+    }
+}
+
+@media all and (max-width: 1150px){
+    .landing.image.outer img{
+        width: 1500px;
+    }
+}
+
+@media all and (max-width: 650px){
+    .landing.image.outer img{
+        transform: translate(10%, 10%)
+    }
+}
+@media all and (max-width: 400px){
+    .landing.image.outer img{
+        transform: translate(15%, 10%)
+    }
+}

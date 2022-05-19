@@ -1,0 +1,32 @@
+.searchresults.outer.container{
+    margin-top: 100px;
+    min-height: 500px; margin-bottom: 50px;
+    display: grid; grid-template-columns: repeat(4, 23vw);
+    grid-auto-rows: 30vw;
+    grid-gap: 1vw;
+} /*Break at 1000px*/
+
+/* Loading Icon */
+.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: center;}
+
+
+/* Alt screens */
+@media all and (max-width: 1200px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(3, 30vw);
+        grid-auto-rows: 40vw;
+    }
+}
+@media all and (max-width: 900px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(2, 40vw);
+        gap: 15px;
+        grid-auto-rows: 50vw;
+    }
+}
+@media all and (max-width: 550px){
+    .searchresults.outer.container{
+        grid-template-columns: repeat(1, 90vw);
+        grid-auto-rows: 100vw;  /*Add max values*/
+    }
+}
