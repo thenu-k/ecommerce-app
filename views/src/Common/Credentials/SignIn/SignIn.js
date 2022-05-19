@@ -11,7 +11,9 @@ const SignIn = () => {
   const dispatch = useDispatch()
 
   //Clicked on label
-  const clickedLabel = (e) =>{e.target.classList.add('move')}
+  const clickedLabel = (e) =>{
+    e.target.closest('.form-element').querySelector('input').focus()
+  }
 
   //Input value changed 
   const checkChange = (e) => {
@@ -19,9 +21,9 @@ const SignIn = () => {
     if(e.target.value!=''){
       label_element.classList.add('move')
     }
-    // if(e.target.value==='' && label_element.classList.contains('move')){
-    //   label_element.classList.remove('move')
-    // }
+    if(e.target.value==='' && label_element.classList.contains('move')){
+      label_element.classList.remove('move')
+    }
   }
 
   //Login function
