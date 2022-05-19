@@ -1,45 +1,31 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, FC} from 'react'
 import LoadingIcon from '../../../Models/LoadingIcon/LoadingIcon'
 import Product from '../../../Models/Product/Product'
 import './SearchResults.css'
 
+//Getting item type
+import {Item} from '../Search'
 
-//Types 
-interface Item {
-  title: string, id: number, img_url: string
-} 
-type Results = Item[] | undefined
+//Prop types
+interface Props {
+  loading: boolean, results: Item[] | undefined
+}
 
+const SearchResults:FC<Props> = (props) => {
+  console.log("Search results mounted")
 
-const SearchResults = (props:any) => {
+  console.log(props.loading)
 
-  //States
-  const [loading, setLoading] = useState(true)
-  const [results, setResults] = useState<Results>()    
-  let url: String;
-
-  // Making the api call
-  useEffect(()=>{url = getURL(props.search_query); getData(url)}, [props.search_query]) 
-
-  //Get url function
-  const getURL = (search_query: string):string => {
-    const strippedQuery: string = search_query.replace(/\+/g, ' ');
-    console.log(strippedQuery)
-    return strippedQuery
-  }
-
-  //Get data function
-  const getData = (url:any) =>{
-    fetch(url).then((res)=>{return res.json()}).then((data)=> {setResults(data); setLoading(false) })
-  }
+  //URL
+  const server_url = 'http://localhost/test'
 
   return (
-    <section className="searchresults outer container center" id={loading ? 'SearchResultsLoading' : 'SearchResultsDone'}>
+    <section className="searchresults outer container center" id={props.loading ? 'SearchResultsLoading' : 'SearchResultsDone'}>
       {
-        loading ?    
+        props.loading ?    
           <LoadingIcon/>
         :
-          results?.map(item=>{return(<Product item={item} key={item.id}/>)})
+          props.results?.map((item)=>{return(<Product item={item} key={item.id}/>)})
       }
     </section>
 

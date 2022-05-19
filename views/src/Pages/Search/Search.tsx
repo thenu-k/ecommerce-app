@@ -5,13 +5,45 @@ import SearchBar from './SearchBar/SearchBar'
 import './Search.css'
 import SearchResults from './SearchResults/SearchResults'
 
+//Types 
+export interface Item {
+  title: string, id: number, img_url: string
+} 
+type Results = Item[] | undefined
+
 const Search = () => {
-  const params = useParams()
-  useEffect(()=>{},[])
+  const params:any = useParams()
+
+  //States
+  const [loading, setLoading] = useState(true)
+  const [results, setResults] = useState<Results>(undefined)  
+  console.log("Search mounted")
+  
+  //Seach
+  useEffect(()=>{
+    setLoading(true)                                              //Whenever the params change this function occurs so we can set loading = true
+    let searchURL: string = getURL(params.search_query!)
+    getData('http://localhost/'+ searchURL)
+  },[params.search_query])
+
+  //Parsing the url
+  const getURL = (search_query:string):string => {
+    const strippedQuery: string = search_query.replace(/\+/g, ' ');
+    return strippedQuery
+  }
+  //Get data function
+  const getData = (getURL:string):void => {
+    fetch(getURL).then((res)=>{return res.json()}).then((data)=> {
+      setResults(data)
+      setLoading(false) 
+    })
+  }
+
+
   return (
     <>
       <SearchBar search_query={params.search_query}/>
-      <SearchResults search_query={params.search_query}/>
+      <SearchResults results={results} loading={loading}/>
     </>
   )
 }
