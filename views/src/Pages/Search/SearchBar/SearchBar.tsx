@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './SearchBar.css'
 
-const SearchBar = (props) => {
+const SearchBar = (props:any) => {
   const [filters, setFilters] = useState({sort_by: null, brand: null})
 
   return (

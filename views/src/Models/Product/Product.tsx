@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Product.css'
 
-const Product = (props) => {
+const Product = (props:any) => {
   return (
     <Link className="product outer wrap" to={'/product/'+props.item.id}>
         <div className="product image outer center" style={{overflow: 'hidden'}}>
