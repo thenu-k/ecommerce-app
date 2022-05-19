@@ -17,7 +17,6 @@ const Search = () => {
   //States
   const [loading, setLoading] = useState(true)
   const [results, setResults] = useState<Results>(undefined)  
-  console.log("Search mounted")
   
   //Seach
   useEffect(()=>{

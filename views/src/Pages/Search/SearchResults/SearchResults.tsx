@@ -12,10 +12,6 @@ interface Props {
 }
 
 const SearchResults:FC<Props> = (props) => {
-  console.log("Search results mounted")
-
-  console.log(props.loading)
-
   //URL
   const server_url = 'http://localhost/test'
 
