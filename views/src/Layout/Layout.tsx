@@ -8,7 +8,7 @@ import Footer from '../Common/Footer/Footer.js';import Header from '../Common/He
 
 const Layout = () => {
   //Redux states
-  const {isMobile} = useSelector((state)=>state.isMobile)
+  const {isMobile} = useSelector((state:any)=>state.isMobile)
   const dispatch = useDispatch()
   
   function checkMobile(){
