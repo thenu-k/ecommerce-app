@@ -9,10 +9,12 @@ import { toggleCredentials } from '../../StateManager/mainSlice';
 //Icons
 const Icon_close = require('../../Assets/closeIcon.png')
 
+
 const Credentials = () => {
   
   //Register or Login? [Redux]
-  const {isRegister} = useSelector((state)=> state.isRegister)
+  //@ts-ignore
+  const {isRegister} = useSelector((state)=> state.isRegister) 
 
   // Display this page? [Redux]
   const dispatch = useDispatch()
@@ -20,12 +22,12 @@ const Credentials = () => {
 
   //Remove Credentials page on outer click
   useEffect(()=>{
-    document.querySelector('.credentials.outer.container').addEventListener('click', (e)=>{
+    document.querySelector('.credentials.outer.container')?.addEventListener('click', (e)=>{
       if(e.target===document.querySelector('.container.outer.credentials')){
         dispatch(toggleCredentials(false))
       }
     })
-  },[isRegister, displayCredentials])
+  },[])
 
   return (
     <>
@@ -33,7 +35,7 @@ const Credentials = () => {
         <section className="credentials inner container">
           <div className="credentials heading">
             <h3>Login or Create an Account</h3>
-            <button onClick={()=> dispatch(toggleCredentials(false))}> <div className="closeIcon outer credentials"><img src={Icon_close} alt=""/></div> </button>
+            <button onClick={()=>dispatch(toggleCredentials(false))}> <div className="closeIcon outer credentials"><img src={Icon_close} alt=""/></div> </button>
           </div>
           {
             isRegister

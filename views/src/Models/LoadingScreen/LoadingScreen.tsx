@@ -3,7 +3,7 @@ import React from 'react'
 const LoadingScreen = () => {
   return (
     <>
-        <section class="loadingscreen container outer">
+        <section className="loadingscreen container outer">
             <h1>GENESIS</h1>
         </section>
 

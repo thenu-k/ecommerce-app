@@ -17,9 +17,6 @@ const Header = (props) => {
   const dispatch = useDispatch()
   const {displayCredentials} = useSelector((state)=> state.displayCredentials)
 
-  //Re-rendering header on sign in click
-  useEffect(()=>{},[displayCredentials])
-
   return (
     <>
     <header aria-label='Header'>
