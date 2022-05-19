@@ -11,7 +11,7 @@ const Search = () => {
   return (
     <>
       <SearchBar search_query={params.search_query}/>
-      <SearchResults/>
+      <SearchResults search_query={params.search_query}/>
     </>
   )
 }

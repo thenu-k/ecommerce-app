@@ -3,6 +3,7 @@ import LoadingIcon from '../../../Models/LoadingIcon/LoadingIcon'
 import Product from '../../../Models/Product/Product'
 import './SearchResults.css'
 
+
 //Types 
 interface Item {
   title: string, id: number, img_url: string
@@ -10,15 +11,24 @@ interface Item {
 type Results = Item[] | undefined
 
 
-const SearchResults = () => {
+const SearchResults = (props:any) => {
 
   //States
   const [loading, setLoading] = useState(true)
   const [results, setResults] = useState<Results>()    
-  const url = 'http://localhost:80/test'
+  let url: String;
 
   // Making the api call
-  useEffect(()=>{getData(url)}, []) 
+  useEffect(()=>{url = getURL(props.search_query); getData(url)}, [props.search_query]) 
+
+  //Get url function
+  const getURL = (search_query: string):string => {
+    const strippedQuery: string = search_query.replace(/\+/g, ' ');
+    console.log(strippedQuery)
+    return strippedQuery
+  }
+
+  //Get data function
   const getData = (url:any) =>{
     fetch(url).then((res)=>{return res.json()}).then((data)=> {setResults(data); setLoading(false) })
   }
