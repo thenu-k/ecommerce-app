@@ -1,9 +1,18 @@
 import {createSlice} from "@reduxjs/toolkit"
 
+//types
+interface InitialState   {
+    isMobile: boolean | null,
+    cart: boolean,
+    displayCredentials: boolean,
+    metaInfo: any,
+    isRegister: boolean
+}
+
 export const mainSlice = createSlice({
     name: "mainSlice",
     initialState:{
-        isMobile: null,
+        isMobile: true,
         cart: false,
         displayCredentials:false,
 
