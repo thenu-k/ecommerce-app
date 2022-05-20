@@ -2,6 +2,7 @@ import React, {FC, useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import LoadingIcon from '../../Models/LoadingIcon/LoadingIcon'
 import './ItemPage.css'
+import Main from './Gallery/Gallery'
 
 interface IDetails {
   wtf: string
@@ -40,7 +41,7 @@ const ItemPage: FC = () => {
       {
         loading 
             ? <LoadingIcon/>
-            : <LoadingIcon/>
+            : <Main details={details}/>
             
       }
     </div>

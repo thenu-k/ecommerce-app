@@ -1,0 +1,38 @@
+/* Container */
+section.gallery.outer{
+    margin-top: 30px; margin-bottom: 80px;
+    display: flex;
+}
+
+/* Selected image */
+.gallery.container.outer .selected_image{
+    overflow: hidden;
+    height: 45vw; width: 30%; max-height: 1000px;
+}
+
+section.gallery .selected_image img{
+    width: 100%;
+}
+
+/* Carousel */
+.gallery.carousel.outer{
+    width: 12vw; height: 45vw;overflow: hidden; position: relative;
+}
+.gallery.carousel.scroll{
+    height: 100%; width: 100%; overflow: scroll;
+}
+.gallery.carousel.inner{
+    height: auto; display: flex; align-items: center; width: 100%; flex-direction: column;
+}
+
+.gallery.carousel.inner .wrap{
+    height: 12vw; background-color: black; width: 80%; margin-bottom: 20px;
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+
+/* Carousel Buttons */
+.gallery.carousel .button{
+    position: absolute; z-index: 99;
+}
+.gallery.carousel button.up{top: 0; right: 0}
+.gallery.carousel button.down{bottom: 0; right: 0}
