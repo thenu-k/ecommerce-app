@@ -1,6 +1,5 @@
 import React, {FC, useRef, useState} from 'react'
 import './Gallery.css'
-import Image1 from './../../../Assets/itemPage1.jpg'
 
 interface IProps {
     details: any
@@ -28,8 +27,6 @@ const Main: FC<IProps> = (props) => {
         }else{clearInterval(scrollDown)}
           scrolled +=10
       }, 10)
-      // checkUpButtonAppear()
-      // checkDownButtonAppear()
     }
     if(direction==="Up"){
       var scrollUp = setInterval(()=>{
@@ -38,24 +35,9 @@ const Main: FC<IProps> = (props) => {
         }else{clearInterval(scrollUp)}
           scrolled +=10
       }, 10)
-      // checkUpButtonAppear()
-      // checkDownButtonAppear()
     }
   }
 
-  //Displaying and removing carousel buttons
-  // const checkUpButtonAppear = ():void => {
-  //   const distance_parentToTop = carouselContainer.current.getBoundingClientRect().top;
-  //   const distance_childToTop = container.current.getBoundingClientRect().top
-  //   if(distance_childToTop>= distance_parentToTop){upButton.current.classList.add('disappear')}else{upButton.current.classList.remove('disappear')}
-  //   if(downButton.current.classList.contains('disappear')){downButton.current.classList.remove('disappear')}
-  // }
-  // const checkDownButtonAppear = ():void => {
-  //   const distance_parentToBottom = carouselContainer.current.getBoundingClientRect().bottom;
-  //   const distance_childToBottom = container.current.getBoundingClientRect().bottom
-  //   if(distance_childToBottom<= distance_parentToBottom){console.log("Reached bottom");downButton.current.classList.add('disappear')}else{downButton.current.classList.remove('disappear')}
-  //   if(upButton.current.classList.contains('disappear')){upButton.current.classList.remove('disappear')}
-  // }
 
   //Change primary image function
   const changePrimaryImage = (e: any):void=>{

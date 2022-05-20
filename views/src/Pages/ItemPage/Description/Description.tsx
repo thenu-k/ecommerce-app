@@ -1,17 +1,9 @@
 import React, {FC} from 'react'
 import './Description.css'
+import {Details} from '../ItemPage'
 
-interface IProps {
-  details: {
-    title: any,
-    sizes: number[],
-    price: string,
-    primary_image: string
-  }
-}
-type DProps= IProps | undefined
 
-const Description:FC<DProps> = (props) => {
+const Description:FC<Details> = (props) => {
   return (
     <section className="description outer container ItemPage">
         <h2 className='center'>{props?.details.title}</h2>

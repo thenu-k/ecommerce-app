@@ -6,3 +6,9 @@
 #ItemPage{
     width: 100%;display: flex; justify-content: center;
 }
+
+@media all and (max-width: 1000px){
+    #ItemPage{
+        width: 100%;flex-direction: column; align-items: center;
+    }
+}

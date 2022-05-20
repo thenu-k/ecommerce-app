@@ -1,7 +1,7 @@
 
 .description.outer.container{
-    width: 40vw; max-width: 900px;
-    height: 45vw; margin-top: 30px; max-height: 800px;
+    width: 40vw; max-width: 700px;
+    height: 45vw; margin-top: 30px; max-height: 650px;
     display: flex; flex-direction: column; align-items: center;
 }
 
@@ -18,8 +18,8 @@ section.description.ItemPage .size_selection{
     display: flex;
 }
 section.description.ItemPage .size_selection button{
-    font-size: 1.5em; font-weight: 500;
-    height: 3vw; width: 3vw;   max-height: 60px; max-width: 60px;
+    font-size: 1.1em; font-weight: 500;
+    height: 50px; width: 50px;  
     margin: 1vw;
     outline: 0; border: 0;
     cursor: pointer;
@@ -32,7 +32,7 @@ section.description.ItemPage .size_selection button:hover{
 }
 
 section.description.outer.container .add_to_cart{
-    width: 50%; height: 4vw; max-height: 100px;
+    width: 300px; height: 50px; max-height: 100px;
     margin-top: 6%;
 }
 section.description.outer.container .add_to_cart button{
@@ -47,3 +47,13 @@ section.description.outer.container .add_to_cart button{
 section.description.outer.container p{
     margin-top: 12%; font-size: 1.1em;
 }
+
+
+/* Alt screens */
+@media all and (max-width: 1000px) {
+    .description.outer.container{
+        height: auto; width: 75%; margin-bottom: 80px; margin-top: 80px;
+    }
+}
+
+/* ^^ Works till 500 */

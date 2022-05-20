@@ -13,7 +13,7 @@ interface IDetails {
     primary_img: string
   }
 }
-type Details = IDetails | undefined
+export type Details = IDetails 
 
 
 //Function
@@ -22,7 +22,7 @@ const ItemPage: FC = () => {
 
   //States
   const [loading, setLoading] = useState(true)
-  const [details, setDetails] = useState<Details>()
+  const [details, setDetails] = useState<Details>({details:{title: 'asdf', sizes: [1,2], price: '123', primary_img: 'sdf'}})
 
   //Fetching data
   useEffect(()=>{
@@ -47,7 +47,7 @@ const ItemPage: FC = () => {
         loading
             ? <LoadingIcon/>
             //@ts-ignore
-            : <><Gallery details={details}/> <Description details={details}/></>
+            : <><Gallery details={details}/> <Description details={details}/></>        //Perhaps because 'data' is type 'any'
             
       }
     </section>
