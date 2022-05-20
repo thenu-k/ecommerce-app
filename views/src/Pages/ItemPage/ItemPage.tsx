@@ -1,8 +1,9 @@
 import React, {FC, useEffect, useState} from 'react'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import LoadingIcon from '../../Models/LoadingIcon/LoadingIcon'
 import './ItemPage.css'
-import Main from './Gallery/Gallery'
+import Gallery from './Gallery/Gallery'
+import Description from './Description/Description'
 
 interface IDetails {
   wtf: string
@@ -17,18 +18,17 @@ const ItemPage: FC = () => {
   //States
   const [loading, setLoading] = useState(true)
   const [details, setDetails] = useState<Details>()
-  const [itemID, setItemID] = useState(params.id)
 
   //Fetching data
   useEffect(()=>{
-    itemID                      //Because item id might not exist
-      ? getItemData(itemID)      
+    params.id                      //Because item id might not exist
+      ? getItemData(params.id)      
       : console.log()     //Fix!
-  }, [])
+  }, [params.id])
 
   //Get and set data function
-  const getItemData = (itemID:string):void => {
-    const URL = `http://localhost/item/details/${itemID}`
+  const getItemData = (id:any):void => {
+    const URL = `http://localhost/item/details/${id}`
     fetch(URL).then(res=>{return res.json()})
     .then(data=> {
       setDetails(data)
@@ -37,14 +37,15 @@ const ItemPage: FC = () => {
   }
 
   return (
-    <div id='ItemPage' className={loading.toString()}>
+    <section id='ItemPage' className={loading.toString()}>
       {
         loading 
             ? <LoadingIcon/>
-            : <Main details={details}/>
+            : <><Gallery details={details}/> <Description details={details}/></>
             
       }
-    </div>
+      <Link to={'/item/1'}>Link</Link>
+    </section>
   )
 }
 
