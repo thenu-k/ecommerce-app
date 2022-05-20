@@ -9,6 +9,8 @@ interface InitialState   {
     isRegister: boolean
 }
 
+
+//Slice
 export const mainSlice = createSlice({
     name: "mainSlice",
     initialState:{
