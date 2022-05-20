@@ -1,7 +1,8 @@
 
 FrontEnd:
     ☐ Create account page
-    ☐ Create item page
+    ✔ Create item page @done 
+    ☐ Make item page responsive
     ✔ Make search page responsive @done 
         ✔ Search Bar @done 
         ✔ Search Results @done 
