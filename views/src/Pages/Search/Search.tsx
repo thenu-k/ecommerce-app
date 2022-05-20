@@ -23,7 +23,7 @@ const Search = () => {
     setLoading(true)                                              //Whenever the params change this function occurs so we can set loading = true
     let searchURL: string = getURL(params.search_query!)
     getData('http://localhost/'+ searchURL)
-  },[params.search_query])
+  },[params.search_query])                                        //Can't leave this empty because Link:parameter doesn't re-render components
 
   //Parsing the url
   const getURL = (search_query:string):string => {
