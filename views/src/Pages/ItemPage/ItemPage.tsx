@@ -44,7 +44,6 @@ const ItemPage: FC = () => {
             : <><Gallery details={details}/> <Description details={details}/></>
             
       }
-      <Link to={'/item/1'}>Link</Link>
     </section>
   )
 }

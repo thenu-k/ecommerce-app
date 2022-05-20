@@ -2,12 +2,13 @@
 section.gallery.outer{
     margin-top: 30px; margin-bottom: 80px;
     display: flex;
+    width: 50%; max-width: 900px;
 }
 
 /* Selected image */
 .gallery.container.outer .selected_image{
     overflow: hidden;
-    height: 45vw; width: 30%; max-height: 1000px; 
+    height: 45vw; width: 60%; max-height: 1000px; max-height:800px;
     background-color: gray;
 }
 
@@ -18,7 +19,8 @@ section.gallery .selected_image img{
 /* Carousel */
 .gallery.carousel.outer{
     margin: 0 2%;
-    width: 12%; height: 45vw;overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center;
+    width: 24%; height: 45vw;overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center;
+    max-height: 800px;
 }
 .gallery.carousel.scroll{
     height: 90%; width: 100%; overflow: scroll;
@@ -34,6 +36,7 @@ section.gallery .selected_image img{
     height: 12vw; background-color: gray; width: 80%; margin-bottom: 20px;
     overflow: hidden; display: flex; align-items: center; justify-content: center;
     border: 0;outline: 0; cursor: pointer;
+    max-height: 250px;
 }
 .gallery.carousel.inner .wrap:last-of-type{margin-bottom: 0}
 

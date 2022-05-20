@@ -1,4 +1,5 @@
 import React, {FC} from 'react'
+import './Description.css'
 
 interface IProps {
   details: any
