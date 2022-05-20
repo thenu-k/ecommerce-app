@@ -57,3 +57,9 @@ section.description.outer.container p{
 }
 
 /* ^^ Works till 500 */
+@media all and (max-width: 500px){
+    .description.outer.container{margin-top: 50px;}
+    .description.outer.container h2{font-size: 1.5em;}
+    section.description.ItemPage .size_selection button{border: 3px solid black; height: 40px; width: 40px; margin: 10px 10px; margin-bottom: 20px}
+    section.description.outer.container .add_to_cart{width: 200px}
+}
