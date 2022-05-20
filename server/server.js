@@ -43,15 +43,15 @@ const items2 = [
 ]
 
 const item_details_popular = [
-    {title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
-    {title:'Jeans', price: '$90', primary_img: '213'}
+    {id: 0, title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
+    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}
 ]
 
 let registeredUsers = []
 
 app.get('/popular', async(req,res)=>{
     console.log("Sending popular data")
-    setTimeout(()=>{res.send(items1)}, 1500)
+    setTimeout(()=>{res.send(item_details_popular)}, 1500)
 })
 app.get('/new', async(req,res)=>{
     console.log("Sending new data")

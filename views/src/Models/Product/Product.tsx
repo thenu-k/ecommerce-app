@@ -6,7 +6,7 @@ const Product = (props:any) => {
   return (
     <Link className="product outer wrap" to={'/item/'+props.item.id}>
         <div className="product image outer center" style={{overflow: 'hidden'}}>
-          <img src={props.item.img_url} alt="" style={{height: 'auto', width: '100%'}}/>
+          <img src={props.item.primary_img} alt="" style={{height: 'auto', width: '100%'}}/>
         </div>
     </Link>
   )
