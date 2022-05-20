@@ -43,7 +43,7 @@ const items2 = [
 ]
 
 const item_details_example = [
-    {title: 1}, {title:2}
+    {title: 'Jacket', sizes: [1,2,3]}, {title:'Jeans'}
 ]
 
 let registeredUsers = []

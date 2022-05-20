@@ -6,7 +6,10 @@ import Gallery from './Gallery/Gallery'
 import Description from './Description/Description'
 
 interface IDetails {
-  wtf: string
+  details: {
+    title: string,
+    sizes:number[]
+  }
 }
 type Details = IDetails | undefined
 
@@ -39,8 +42,9 @@ const ItemPage: FC = () => {
   return (
     <section id='ItemPage' className={loading.toString()}>
       {
-        loading 
+        loading
             ? <LoadingIcon/>
+            //@ts-ignore
             : <><Gallery details={details}/> <Description details={details}/></>
             
       }
