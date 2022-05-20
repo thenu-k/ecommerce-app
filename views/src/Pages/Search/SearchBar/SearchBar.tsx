@@ -13,7 +13,7 @@ const SearchBar = (props:any) => {
   //Search Item function
   const searchItem = (e: React.FormEvent):void => {
     e.preventDefault();
-    navigate('/search/new', {replace: true})
+    navigate('/search/new', {replace: false})
   }
 
   return (
