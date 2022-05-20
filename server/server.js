@@ -42,9 +42,9 @@ const items2 = [
     }
 ]
 
-const item_details_example = {
-    wtf: 'wtf'
-}
+const item_details_example = [
+    {title: 1}, {title:2}
+]
 
 let registeredUsers = []
 
@@ -67,5 +67,5 @@ app.post('/registerUser',json_parser, async(req, res)=>{
 //Item details test
 app.get('/item/details/:id', async(req, res)=>{
     console.log(`Received request for item ${req.params.id} details`)
-    setTimeout(()=>{res.send(item_details_example)}, 10)
+    setTimeout(()=>{res.send(item_details_example[req.params.id])}, 10)
 })
