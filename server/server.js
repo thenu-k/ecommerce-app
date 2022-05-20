@@ -67,5 +67,5 @@ app.post('/registerUser',json_parser, async(req, res)=>{
 //Item details test
 app.get('/item/details/:id', async(req, res)=>{
     console.log(`Received request for item ${req.params.id} details`)
-    setTimeout(()=>{res.send(item_details_example)}, 1500)
+    setTimeout(()=>{res.send(item_details_example)}, 10)
 })

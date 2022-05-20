@@ -7,7 +7,7 @@ section.gallery.outer{
 /* Selected image */
 .gallery.container.outer .selected_image{
     overflow: hidden;
-    height: 45vw; width: 30%; max-height: 1000px;
+    height: 45vw; width: 30%; max-height: 1000px; 
 }
 
 section.gallery .selected_image img{
@@ -16,10 +16,14 @@ section.gallery .selected_image img{
 
 /* Carousel */
 .gallery.carousel.outer{
-    width: 12vw; height: 45vw;overflow: hidden; position: relative;
+    margin: 0 2%;
+    width: 12%; height: 45vw;overflow: hidden; position: relative; display: flex; justify-content: center;
 }
 .gallery.carousel.scroll{
     height: 100%; width: 100%; overflow: scroll;
+    /* Hiding the scroll bar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 .gallery.carousel.inner{
     height: auto; display: flex; align-items: center; width: 100%; flex-direction: column;
@@ -29,10 +33,14 @@ section.gallery .selected_image img{
     height: 12vw; background-color: black; width: 80%; margin-bottom: 20px;
     overflow: hidden; display: flex; align-items: center; justify-content: center;
 }
+.gallery.carousel.inner .wrap:last-of-type{margin-bottom: 0}
 
 /* Carousel Buttons */
 .gallery.carousel .button{
     position: absolute; z-index: 99;
+    outline: 0; border: 0; height: 3vw; width: 3vw; display: flex; align-items: center; justify-content: center; background-color: white;
+    cursor: pointer;
 }
-.gallery.carousel button.up{top: 0; right: 0}
-.gallery.carousel button.down{bottom: 0; right: 0}
+.gallery.carousel button.up{top: 0.5vw;}
+.gallery.carousel button.down{bottom: 0.5vw;}
+.gallery.carousel button.disappear{display: none}
