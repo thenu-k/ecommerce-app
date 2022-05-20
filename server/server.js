@@ -42,8 +42,9 @@ const items2 = [
     }
 ]
 
-const item_details_example = [
-    {title: 'Jacket', sizes: [1,2,3]}, {title:'Jeans'}
+const item_details_popular = [
+    {title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
+    {title:'Jeans', price: '$90', primary_img: '213'}
 ]
 
 let registeredUsers = []
@@ -67,5 +68,5 @@ app.post('/registerUser',json_parser, async(req, res)=>{
 //Item details test
 app.get('/item/details/:id', async(req, res)=>{
     console.log(`Received request for item ${req.params.id} details`)
-    setTimeout(()=>{res.send(item_details_example[req.params.id])}, 10)
+    setTimeout(()=>{res.send(item_details_popular[req.params.id])}, 10)
 })

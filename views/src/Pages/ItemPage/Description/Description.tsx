@@ -4,7 +4,9 @@ import './Description.css'
 interface IProps {
   details: {
     title: any,
-    sizes: []
+    sizes: number[],
+    price: string,
+    primary_image: string
   }
 }
 type DProps= IProps | undefined
@@ -24,7 +26,7 @@ const Description:FC<DProps> = (props) => {
             }
           </div>
           <div className="add_to_cart">
-            <button>Add To Cart</button>
+            <button>Add To Cart | {props?.details.price}</button>
           </div>
         </form>
         <p className="actual_description">

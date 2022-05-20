@@ -8,7 +8,9 @@ import Description from './Description/Description'
 interface IDetails {
   details: {
     title: string,
-    sizes:number[]
+    sizes:number[],
+    price: string,
+    primary_img: string
   }
 }
 type Details = IDetails | undefined

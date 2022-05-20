@@ -14,7 +14,7 @@ const Main: FC<IProps> = (props) => {
   const upButton = useRef<any | undefined>(); const downButton = useRef<any | undefined>()
 
   //States
-  const [primaryImgSrc, setPrimaryImgSrc] = useState('https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+  const [primaryImgSrc, setPrimaryImgSrc] = useState(props.details.primary_img)
 
   
   //Carousel 
@@ -72,7 +72,7 @@ const Main: FC<IProps> = (props) => {
 
           <div className="gallery carousel scroll" ref={carouselContainer}>
             <div className="gallery carousel inner" ref={container}>
-              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img></button>
+              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src={props.details.primary_img}></img></button>
               <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src="https://images.pexels.com/photos/1998846/pexels-photo-1998846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></img></button>
               <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img></button>
               <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/></button>
