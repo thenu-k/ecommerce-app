@@ -8,6 +8,7 @@ section.gallery.outer{
 .gallery.container.outer .selected_image{
     overflow: hidden;
     height: 45vw; width: 30%; max-height: 1000px; 
+    background-color: gray;
 }
 
 section.gallery .selected_image img{
@@ -17,10 +18,10 @@ section.gallery .selected_image img{
 /* Carousel */
 .gallery.carousel.outer{
     margin: 0 2%;
-    width: 12%; height: 45vw;overflow: hidden; position: relative; display: flex; justify-content: center;
+    width: 12%; height: 45vw;overflow: hidden; position: relative; display: flex; justify-content: center; align-items: center;
 }
 .gallery.carousel.scroll{
-    height: 100%; width: 100%; overflow: scroll;
+    height: 90%; width: 100%; overflow: scroll;
     /* Hiding the scroll bar */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -30,8 +31,9 @@ section.gallery .selected_image img{
 }
 
 .gallery.carousel.inner .wrap{
-    height: 12vw; background-color: black; width: 80%; margin-bottom: 20px;
+    height: 12vw; background-color: gray; width: 80%; margin-bottom: 20px;
     overflow: hidden; display: flex; align-items: center; justify-content: center;
+    border: 0;outline: 0; cursor: pointer;
 }
 .gallery.carousel.inner .wrap:last-of-type{margin-bottom: 0}
 
@@ -39,8 +41,18 @@ section.gallery .selected_image img{
 .gallery.carousel .button{
     position: absolute; z-index: 99;
     outline: 0; border: 0; height: 3vw; width: 3vw; display: flex; align-items: center; justify-content: center; background-color: white;
-    cursor: pointer;
+    cursor: pointer; 
+    background-color: rgb(246, 246, 246);
 }
-.gallery.carousel button.up{top: 0.5vw;}
-.gallery.carousel button.down{bottom: 0.5vw;}
-.gallery.carousel button.disappear{display: none}
+.gallery.carousel .button:hover{
+    background-color: rgb(214, 214, 214);
+}
+.gallery.carousel button.up.button{top: 0.2vw; border-top: 4px solid black;}
+.gallery.carousel button.down.button{bottom: 0.2vw; border-bottom: 4px solid black;}
+.gallery.carousel button.disappear.button{display: none}
+
+
+/* Carousel images */
+.gallery.carousel button img{
+    width: 100%;
+}

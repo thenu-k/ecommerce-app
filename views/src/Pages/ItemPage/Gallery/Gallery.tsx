@@ -1,4 +1,4 @@
-import React, {FC, useRef} from 'react'
+import React, {FC, useRef, useState} from 'react'
 import './Gallery.css'
 import Image1 from './../../../Assets/itemPage1.jpg'
 
@@ -12,6 +12,9 @@ const Main: FC<IProps> = (props) => {
   const carouselContainer = useRef<any | undefined>()
   const container = useRef<any | undefined>()
   const upButton = useRef<any | undefined>(); const downButton = useRef<any | undefined>()
+
+  //States
+  const [primaryImgSrc, setPrimaryImgSrc] = useState('https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
 
   
   //Carousel 
@@ -54,22 +57,31 @@ const Main: FC<IProps> = (props) => {
   //   if(upButton.current.classList.contains('disappear')){upButton.current.classList.remove('disappear')}
   // }
 
+  //Change primary image function
+  const changePrimaryImage = (e: any):void=>{
+    const imgSrc = e.target.src    //Apparently the image comes straight away
+    setPrimaryImgSrc(imgSrc)
+  }
+
   return (
     <section className="gallery container outer itemPage">
         
         <div className="gallery carousel outer">
-          <button onClick={()=>moveCarousel("Up")} className='gallery up button' ref={upButton}>Up</button>
-          <button onClick={()=>moveCarousel("Down")} className='gallery button down' ref={downButton}>Down</button>
+          <button onClick={()=>moveCarousel("Up")} className='gallery up button' ref={upButton}>↑</button>
+          <button onClick={()=>moveCarousel("Down")} className='gallery button down' ref={downButton}>↓</button>
 
           <div className="gallery carousel scroll" ref={carouselContainer}>
             <div className="gallery carousel inner" ref={container}>
-              <div className="wrap"></div><div className="wrap"></div><div className="wrap"></div><div className="wrap"></div>
+              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img></button>
+              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src="https://images.pexels.com/photos/1998846/pexels-photo-1998846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></img></button>
+              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'></img></button>
+              <button className="wrap" onClick={(e)=>{changePrimaryImage(e)}}><img src='https://images.pexels.com/photos/1689731/pexels-photo-1689731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'/></button>
             </div>
           </div>
         </div>
 
         <div className="selected_image outer center">
-          <img src={Image1} alt="" />
+          <img src={primaryImgSrc} alt="" />
         </div>
     </section>
   )
