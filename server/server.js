@@ -42,6 +42,9 @@ const items2 = [
     }
 ]
 
+const item_details_example = {
+    wtf: 'wtf'
+}
 
 let registeredUsers = []
 
@@ -49,7 +52,6 @@ app.get('/popular', async(req,res)=>{
     console.log("Sending popular data")
     setTimeout(()=>{res.send(items1)}, 1500)
 })
-
 app.get('/new', async(req,res)=>{
     console.log("Sending new data")
     setTimeout(()=>{res.send(items2)}, 1500)
@@ -60,4 +62,10 @@ app.post('/registerUser',json_parser, async(req, res)=>{
     console.log("Received registration request")
     registeredUsers.push(req.body)
     console.log(registeredUsers)
+})
+
+//Item details test
+app.get('/item/details/:id', async(req, res)=>{
+    console.log(`Received request for item ${req.params.id} details`)
+    res.send(item_details_example)
 })

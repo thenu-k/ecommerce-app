@@ -2,12 +2,12 @@
 FrontEnd:
     ☐ Create account page
     ☐ Create item page
-    ☐ Make search page responsive:
-        ☐ Search Bar
-        ☐ Search Results
+    ✔ Make search page responsive @done 
+        ✔ Search Bar @done 
+        ✔ Search Results @done 
     ☐ Make footer responsivie
     ☐ Add an auth system
-    ☐ Create SignIn/Register component
+    ✔ Create SignIn/Register component @done
         ✔ Create Register component @done 
     ☐ Fix search bar center bug
     ✔ Add state management system @done 
