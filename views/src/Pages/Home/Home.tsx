@@ -9,9 +9,7 @@ const Home = () => {
   return (
     <>
       <Landing/>
-      <Large1/>
       <Featured/>
-      <Large2/>
     </>
   )
 }

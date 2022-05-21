@@ -20,14 +20,14 @@ nav ul{
 }
 .logo.outer a{
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 500;
 }
 .logo.outer img{
     height: 30px;
 }
 
 nav ul a{
-    font-weight: 700;
+    font-weight: 500;
 }
 nav ul a:hover{border-bottom: 2px solid black}
 
