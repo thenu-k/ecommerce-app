@@ -9,7 +9,7 @@ section.gallery.outer{
 .gallery.container.outer .selected_image{
     overflow: hidden;
     height: 45vw; width: 60%; max-height: 1000px; max-height:800px;
-    background-color: gray;
+    background-color: rgb(225, 225, 225);;
 }
 
 section.gallery .selected_image img{
@@ -33,7 +33,7 @@ section.gallery .selected_image img{
 }
 
 .gallery.carousel.inner .wrap{
-    height: 12vw; background-color: gray; width: 80%; margin-bottom: 20px;
+    height: 12vw; background-color: rgb(235, 235, 235); width: 80%; margin-bottom: 20px;
     overflow: hidden; display: flex; align-items: center; justify-content: center;
     border: 0;outline: 0; cursor: pointer;
     max-height: 250px;

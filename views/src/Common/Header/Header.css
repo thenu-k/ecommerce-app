@@ -65,4 +65,5 @@ header .cart_icon.outer{
     top: 0; right: 0;
     border-radius: 9999px; -webkit-border-radius: 9999px;
     background-color: red;
+    color: white; font-weight: 600;
 }
