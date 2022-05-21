@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Link } from 'react-router-dom'
 
-const HeaderLinks = () => {
+const HeaderLinks:FC = () => {
   return (
     <>
         <li><Link to="/">Home</Link></li>

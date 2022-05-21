@@ -2,7 +2,7 @@
 FrontEnd:
     ☐ Create account page
     ✔ Create item page @done 
-    ☐ Make item page responsive
+    ✔ Make item page responsive @done 
     ✔ Make search page responsive @done 
         ✔ Search Bar @done 
         ✔ Search Results @done 
@@ -10,10 +10,13 @@ FrontEnd:
     ☐ Add an auth system
     ✔ Create SignIn/Register component @done
         ✔ Create Register component @done 
-    ☐ Fix search bar center bug
+    ✔ Fix search bar center bug @done 
     ✔ Add state management system @done 
+    ✔ Fixed footer position @done 
 
-    ☐ Add bottom margins for all the pages because of the footer
-
+    ☐ Add session system for the cart
+    ☐ Revamp the home page
+    ☐ Make the search function work
+    ☐ Create cart page
 
     
