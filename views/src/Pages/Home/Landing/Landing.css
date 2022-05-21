@@ -1,51 +1,53 @@
 
-.landing.image.outer{
-    width: 100%; max-height: 1000px; min-height: 600px;
+.landing.container.outer{
+    height: 95vh; min-height: 500px; width: 100%; max-height: 900px; position: relative;
     overflow: hidden;
-    background-color: rgb(225, 225, 225);
-    position: relative;
-}
-.landing.image.outer img{
-    width: 1600px;
-    position: absolute;  z-index: 9;
-    transform: translateY(10%)
 }
 
-.landing.text.outer{
-    height: 100%;
+.landing.container.outer img{
+    width: 1980px;
+}
+
+/* Text section */
+.landing.container .landing.text.outer{
     position: absolute;
-    left: 0; z-index: 99;
-    display:flex; justify-content: center; align-items: center;
-    flex-direction: column;
+    /* left: 10vw; bottom: 10vw; */
+    display: flex; align-items: center; flex-direction: column;
 }
 
-.landing.text.outer h2{
-    font-size: 3em; color: white; display: none;
+.landing.container .landing.text.outer h2{
+    font-size: 4em;  font-weight: 700; color: white; 
+    margin-bottom: 30px;
+}
+.landing.container .landing.text.outer a {
+    width: 250px; height: 50px; color: white; font-weight: 700; font-size: 1.5em; 
+    background-color: rgb(255, 26, 26);
 }
 
 
-/* Alt screens */
-@media all and (min-width: 1700px){
-    .landing.image.outer img{
-        width: 1980px;
-        position: absolute;
-        transform: translateY(10%)
+/* Image widths */
+@media all and (max-width: 1500px){
+    .landing.container.outer img{ width: 1700px}
+}
+@media all and (max-width: 1000px){
+    .landing.container.outer img{ width: 1400px}
+
+    .landing.container .landing.text.outer h2{
+        font-size: 3em;
+    }
+    .landing.container .landing.text.outer a {
+        width: 200px; height: 40px;
     }
 }
+@media all and (max-width: 700px){
+    .landing.container.outer img{ height: 100%}
 
-@media all and (max-width: 1150px){
-    .landing.image.outer img{
-        width: 1500px;
+    .landing.container .landing.text.outer h2{
+        font-size: 2em;
+        margin-bottom: 20px;
     }
-}
 
-@media all and (max-width: 650px){
-    .landing.image.outer img{
-        transform: translate(10%, 10%)
-    }
-}
-@media all and (max-width: 400px){
-    .landing.image.outer img{
-        transform: translate(15%, 10%)
+    .landing.container .landing.text.outer a {
+        width: 150px; height: 30px; font-size: 1em; 
     }
 }
