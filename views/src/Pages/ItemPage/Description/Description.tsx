@@ -1,9 +1,21 @@
-import React, {FC} from 'react'
+import React, {ChangeEvent, FC, useState} from 'react'
 import './Description.css'
 import {Details} from '../ItemPage'
+import { clickOptions } from '@testing-library/user-event/dist/click'
 
 
 const Description:FC<Details> = (props) => {
+
+  //States
+  const [size, setSize] = useState(null)
+
+  //Select size function
+  const selectSize = (e:any):void =>{
+    document.querySelectorAll('.size_selection button')?.forEach(button=>{if(button!=e.target){button.classList.remove('highlight')}})
+    if(e.target.classList.contains('highlight')){e.target.classList.remove('highlight')}else{e.target.classList.toggle('highlight')}
+    setSize(e.target.innerHTML)
+  }
+
   return (
     <section className="description outer container ItemPage">
         <h2 className='center'>{props?.details.title}</h2>
@@ -12,13 +24,13 @@ const Description:FC<Details> = (props) => {
             {
               props?.details.sizes?.map((size)=>{
                 return(
-                <button onClick={()=> {}}>{size}</button>
+                <button key={props.details.id} type="button" onClick={(e)=> {selectSize(e)}}>{size}</button>
                 )
               })
             }
           </div>
           <div className="add_to_cart">
-            <button>Add To Cart | {props?.details.price}</button>
+            <button type="submit">Add To Cart | {props?.details.price}</button>
           </div>
         </form>
         <p className="actual_description">

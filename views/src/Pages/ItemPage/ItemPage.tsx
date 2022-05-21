@@ -7,6 +7,7 @@ import Description from './Description/Description'
 
 interface IDetails {
   details: {
+    id: number
     title: string,
     sizes:number[],
     price: string,
@@ -22,7 +23,7 @@ const ItemPage: FC = () => {
 
   //States
   const [loading, setLoading] = useState(true)
-  const [details, setDetails] = useState<Details>({details:{title: 'asdf', sizes: [1,2], price: '123', primary_img: 'sdf'}})
+  const [details, setDetails] = useState<Details>({details:{id: 12, title: 'asdf', sizes: [1,2], price: '123', primary_img: 'sdf'}})
 
   //Fetching data
   useEffect(()=>{
