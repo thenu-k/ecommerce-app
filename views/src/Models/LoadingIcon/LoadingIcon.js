@@ -8,7 +8,7 @@ const LoadingIcon = () => {
             .loader {
               width: 12px;
               height: 12px;
-              border-radius: 50%;
+              border-radius: 0%;
               display: block;
               margin:15px auto;
               position: relative;

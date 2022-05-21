@@ -7,9 +7,11 @@
 } /*Break at 1000px*/
 
 /* Loading Icon */
-.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height: 500px; align-items: center;}
+.searchresults.outer.container#SearchResultsLoading{display: flex; justify-content: center; height:80vh; min-height: 300px;max-height: 400px; align-items: center;}
 
-
+.searchresults.outer.container#SearchResultsLoading .loader{
+    /* transform: translateX(0.5vw) */
+}
 /* Alt screens */
 @media all and (max-width: 1200px){
     .searchresults.outer.container{
