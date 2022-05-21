@@ -3,6 +3,7 @@ import isMobile from './mainSlice'
 import displayCredentials from './mainSlice'
 import metaInfo from './mainSlice'
 import isRegister from './mainSlice'
+import cartItems from './mainSlice'
 
 //Store type
 
@@ -11,6 +12,7 @@ export default configureStore({
        isMobile: isMobile,
        displayCredentials: displayCredentials,
        metaInfo: metaInfo,
-       isRegister: isRegister
+       isRegister: isRegister,
+       cartItems: cartItems
     }
 })

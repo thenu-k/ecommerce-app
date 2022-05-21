@@ -9,6 +9,9 @@ interface InitialState   {
     isRegister: boolean
 }
 
+interface ICartActions {
+    add?: boolean, remove?: boolean, qty: number, removeAll?: boolean, itemDetails: object
+}
 
 //Slice
 export const mainSlice = createSlice({
@@ -24,7 +27,11 @@ export const mainSlice = createSlice({
         },
 
         //Login or register
-        isRegister: true
+        isRegister: true,
+
+        //Cart Items
+        cartItems: []
+
     },
     reducers:{
         setScreenType: (state, action)=>{
@@ -41,10 +48,21 @@ export const mainSlice = createSlice({
             action.payload
                 ?   state.isRegister = true
                 :   state.isRegister = false
+        },
+
+        //Cart actions
+        cartActions: (state, action) => {
+            const parsedActions:ICartActions = action.payload
+            if(parsedActions.add===true){
+                for(let count = 0; count< parsedActions.qty; count++){
+                    // @ts-ignore
+                    state.cartItems.push({item: parsedActions.itemDetails, qty: parsedActions.qty})
+                }
+            }
         }
     }
 })
 
 //Exports
-export const {setScreenType, toggleCredentials, setIsRegister} = mainSlice.actions
+export const {setScreenType, toggleCredentials, setIsRegister, cartActions} = mainSlice.actions
 export default mainSlice.reducer;

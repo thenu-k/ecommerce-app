@@ -1,13 +1,17 @@
 import React, {ChangeEvent, FC, useState} from 'react'
 import './Description.css'
 import {Details} from '../ItemPage'
-import { clickOptions } from '@testing-library/user-event/dist/click'
+import { useDispatch, useSelector } from 'react-redux'
+import { cartActions } from '../../../StateManager/mainSlice'
 
 
 const Description:FC<Details> = (props) => {
 
   //States
   const [size, setSize] = useState(null)
+
+  //Redux cart state
+  const dispatch = useDispatch()
 
   //Select size function
   const selectSize = (e:any):void =>{
@@ -16,10 +20,27 @@ const Description:FC<Details> = (props) => {
     setSize(e.target.innerHTML)
   }
 
+  //Add to cart function
+  const handleAddToCart = (e:any):void => {
+    e.preventDefault()
+    const itemDetails = props.details
+    const wantedSize = size
+    const details ={
+      id: itemDetails.id,
+      title: itemDetails.title,
+      price: itemDetails.price,
+      size: size
+    }
+    const payload = {
+      add: true, qty: 1, itemDetails: details
+    }
+    dispatch(cartActions(payload))
+  }
+
   return (
     <section className="description outer container ItemPage">
         <h2 className='center'>{props?.details.title}</h2>
-        <form action="">
+        <form onSubmit={(e)=>handleAddToCart(e)}>
           <div className="size_selection">
             {
               props?.details.sizes?.map((size)=>{
