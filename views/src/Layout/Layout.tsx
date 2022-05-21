@@ -4,7 +4,7 @@ import { Outlet, Link } from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'; import { setScreenType } from '../StateManager/mainSlice';
 
 //Components
-import Footer from '../Common/Footer/Footer.js';import Header from '../Common/Header/Header.js';import MobileHeader from '../Common/MobileHeader/MobileHeader.js'
+import Footer from '../Common/Footer/Footer';import Header from '../Common/Header/Header';import MobileHeader from '../Common/MobileHeader/MobileHeader'
 
 const Layout = () => {
   //Redux states

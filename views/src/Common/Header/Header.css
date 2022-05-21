@@ -52,3 +52,17 @@ nav ul a:hover{border-bottom: 2px solid black}
     display: flex;
 }
 .header.action_list.outer>button:first-child{margin-right: 20px;}
+
+
+/* Cart icon number */
+header .cart_icon.outer{
+    position: relative;
+}
+
+.cart_icon_qty{
+    position: absolute; display: flex; align-items: center; justify-content: center;
+    width: 40%; height: 40%;
+    top: 0; right: 0;
+    border-radius: 9999px; -webkit-border-radius: 9999px;
+    background-color: red;
+}

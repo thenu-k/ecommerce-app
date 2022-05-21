@@ -23,7 +23,7 @@ const Description:FC<Details> = (props) => {
   //Add to cart function
   const handleAddToCart = (e:any):void => {
     e.preventDefault()
-    const itemDetails = props.details
+    const itemDetails = props.details //Create function that test for the size
     const wantedSize = size
     const details ={
       id: itemDetails.id,

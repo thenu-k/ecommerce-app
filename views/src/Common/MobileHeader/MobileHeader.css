@@ -81,3 +81,10 @@ header.mobile .links.inner li a{
     display: flex;align-items: center;justify-content: center;
     height: 100%; width: 100%;
 }
+
+
+/* Cart count */
+.cart_icon_qty{
+    height: 40%; width: 40%; 
+    font-size: 0.6em;
+}

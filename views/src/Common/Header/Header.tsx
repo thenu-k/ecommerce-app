@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from 'react'
+import { useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import './Header.css' ;
 import HeaderLinks from '../HeaderLinks';
@@ -16,9 +16,19 @@ const Icon_logo = require('./../../Assets/logo.png')
 
 
 
-const Header = (props) => {
+const Header = (props:any) => {
   const dispatch = useDispatch()
-  const {displayCredentials} = useSelector((state)=> state.displayCredentials)
+  const {displayCredentials} = useSelector((state:any)=> state.displayCredentials)
+  const {cartItems} = useSelector((state:any)=>state.cartItems)
+
+  useEffect(()=>{
+    let numItems = cartItems.length
+    const cartCountElement = document.querySelector('.cart_icon_qty')
+    // @ts-ignore
+    if(numItems===0){cartCountElement.style.display = 'none'}else{cartCountElement.style.display = 'flex'}
+    // @ts-ignore
+    cartCountElement.innerHTML = numItems
+  }, [cartItems])
 
   return (
     <>
@@ -34,7 +44,7 @@ const Header = (props) => {
           </div>
           <div className="header action_list outer" aria-label='User Actions'>
             <button className="account_icon outer" aria-label="Account Button" onClick={()=> dispatch(toggleCredentials())}><img src={Icon_userAccount}/></button>
-            <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/></button>
+            <button className="cart_icon outer" aria-label="Cart Button"><img src={Icon_cart}/><span className="cart_icon_qty">2</span></button>
           </div>
         </nav>
       </header>
