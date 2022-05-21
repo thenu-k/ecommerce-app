@@ -1,69 +1,104 @@
-
-.description.outer.container{
-    width: 40vw; max-width: 700px;
-    height: 45vw; margin-top: 30px; max-height: 650px;
-    display: flex; flex-direction: column; align-items: center;
+.description.outer.container {
+  width: 40vw;
+  max-width: 700px;
+  height: 45vw;
+  margin-top: 30px;
+  max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.description.outer.container h2{
-    width: 100%; 
-    font-size: 2.5em; font-weight: 600;
+.description.outer.container h2 {
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
-section.description.ItemPage form{
-    margin-top: 6%; width: 100%;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
+section.description.ItemPage form {
+  margin-top: 6%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-section.description.ItemPage .size_selection{
-    display: flex;
+section.description.ItemPage .size_selection {
+  display: flex;
 }
-section.description.ItemPage .size_selection button{
-    font-size: 1.1em; font-weight: 500;
-    height: 50px; width: 50px;  
-    margin: 1vw;
-    outline: 0; border: 0;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    border: 4px solid black;
-    display: flex; align-items: center;justify-content: center;
+section.description.ItemPage .size_selection button {
+  font-size: 1.1em;
+  font-weight: 500;
+  height: 50px;
+  width: 50px;
+  margin: 1vw;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-section.description.ItemPage .size_selection button:hover{
-    background-color: rgb(240, 240, 240);
-}
-
-section.description.ItemPage .size_selection button.highlight{
-    background-color: rgb(34, 222, 34);
-}
-
-section.description.outer.container .add_to_cart{
-    width: 300px; height: 50px; max-height: 100px;
-    margin-top: 6%;
-}
-section.description.outer.container .add_to_cart button{
-    width: 100%; height: 100%;
-    border: 0; outline: 0;
-    color: white;
-    display: flex; align-items: center; justify-content: center;
-    background-color: black;
-    cursor: pointer;
+section.description.ItemPage .size_selection button:hover {
+  background-color: rgb(240, 240, 240);
 }
 
-section.description.outer.container p{
-    margin-top: 12%; font-size: 1.1em;
+section.description.ItemPage .size_selection button.highlight {
+  background-color: rgb(34, 222, 34);
 }
 
+section.description.outer.container .add_to_cart {
+  width: 300px;
+  height: 50px;
+  max-height: 100px;
+  margin-top: 6%;
+}
+section.description.outer.container .add_to_cart button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  cursor: pointer;
+}
+
+section.description.outer.container p {
+  margin-top: 12%;
+  font-size: 1.1em;
+}
 
 /* Alt screens */
 @media all and (max-width: 1000px) {
-    .description.outer.container{
-        height: auto; width: 75%; margin-bottom: 80px; margin-top: 80px;
-    }
+  .description.outer.container {
+    height: auto;
+    width: 75%;
+    margin-bottom: 80px;
+    margin-top: 80px;
+  }
 }
 
 /* ^^ Works till 500 */
-@media all and (max-width: 500px){
-    .description.outer.container{margin-top: 50px;}
-    .description.outer.container h2{font-size: 1.5em;}
-    section.description.ItemPage .size_selection button{border: 3px solid black; height: 40px; width: 40px; margin: 10px 10px; margin-bottom: 20px}
-    section.description.outer.container .add_to_cart{width: 200px}
+@media all and (max-width: 500px) {
+  .description.outer.container {
+    margin-top: 50px;
+  }
+  .description.outer.container h2 {
+    font-size: 1.5em;
+  }
+  section.description.ItemPage .size_selection button {
+    border: 3px solid black;
+    height: 40px;
+    width: 40px;
+    margin: 10px 10px;
+    margin-bottom: 20px;
+  }
+  section.description.outer.container .add_to_cart {
+    width: 200px;
+  }
 }

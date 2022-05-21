@@ -75,6 +75,7 @@ header.mobile .links.inner li{
     width: 80%;
     height: 2.5em; background-color: black;;
     margin-bottom: 10px;
+    border-radius: 5px; -webkit-border-radius: 5px;
 }
 header.mobile .links.inner li a{
     color: white;

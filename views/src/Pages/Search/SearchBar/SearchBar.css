@@ -5,7 +5,7 @@
     align-items: center; 
     position: fixed; top: 65px;   /*Height of header* z-index: 999;*/
     background-color: #fff;
-    z-index: 999;
+    z-index: 99;
 }
 
 .searchbar.container.outer .search_query{
