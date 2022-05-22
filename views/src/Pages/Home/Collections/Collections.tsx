@@ -6,11 +6,11 @@ import shoesHover from '../../../Assets/shoesHover.jpg'
 
 const Collections = () => {
   return (
-    <section className="collections outer container">
-        {/* <div className="collections inner container center">
+    <section className="collections outer container center">
+        <div className="collections inner container center">
             <img src={shoesHover} alt="" />
             <h3>Comfort, Redefined.</h3>
-        </div> */}
+        </div>
     </section>
   )
 }

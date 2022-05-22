@@ -1,4 +1,5 @@
 import React from 'react'
+import Categories from './Categories/Categories'
 import Collections from './Collections/Collections'
 import Featured from './Featured/Featured'
 import Landing from './Landing/Landing'
@@ -10,8 +11,8 @@ const Home = () => {
   return (
     <>
       <Landing/>
-      <Featured/>
-      <Collections/>
+      {/* <Featured/> */}
+      <Categories/>
     </>
   )
 }
