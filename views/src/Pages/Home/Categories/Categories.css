@@ -18,6 +18,10 @@ section.categories .category_wrap{
     position: relative;
 }
 
+section.categories .category_wrap:hover{
+    filter: brightness(0.9)
+}
+
 section.categories .category_wrap img{
     height: 100%;
 }
@@ -31,7 +35,7 @@ section.categories .category_wrap:nth-child(4) img{width: 100%; height: auto; tr
 section.categories .category_wrap span{
     display: flex; align-items: center; justify-content: center;
     height: 3vw; width: 100%; background-color: rgb(225, 225, 225);
-    font-weight: 700;font-size: 1.5vw; 
+    font-weight: 700;font-size: 1.3vw; 
     position: absolute;
     bottom: 0;
 }

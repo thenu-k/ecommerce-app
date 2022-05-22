@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom'
 
 const Categories = () => {
   return (
-    <section className="categories outer container center">
-        <div className="categories inner container">
+    <section className="categories outer container center" aria-label='Shoe Category Section'>
+        <div className="categories inner container" aria-label='Inner section'>
             <Link to='' className="category_wrap center">
                 <img src={shoesComfort} alt="" />
                 <span>Comfort</span>
