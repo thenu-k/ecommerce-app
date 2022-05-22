@@ -7,7 +7,7 @@ section.featured.container.outer{
 div.featured.container.inner{
     width: 100%; max-width: 2000px;
     display: flex;  align-items: center; justify-content: center; gap: 1vw;
-    margin: 10vw 0;
+    margin: 100px 0;
 }
 
 section.featured .title {
@@ -48,11 +48,11 @@ section.featured .forThem:hover{
 
 section.featured .forThem a.shop{
     display:flex;
-    width: 20vw; height:5vw; max-width: 200px; max-height: 50px; min-width: 150px; min-height: 2em;
+    width: 20vw; height:50px; max-width: 200px; min-width: 150px; 
     position: absolute; z-index: 99;
     border: 0; outline: 0;
     background-color: white;
-    font-weight: 500;
+    font-weight: 700;
 }
 section.featured a.shop:hover{display: flex; background-color: rgb(224, 224, 224)}
 
@@ -61,7 +61,7 @@ section.featured a.shop:hover{display: flex; background-color: rgb(224, 224, 224
 
 @media all and (max-width: 750px){
     div.featured.container.inner{
-        flex-direction: column; gap: 30px;
+        flex-direction: column; gap: 30px; margin: 50px 0;
     }
 
     section.featured .forThem{width: 90%; height: 50vw;  }

@@ -20,10 +20,12 @@
     margin-bottom: 30px;
 }
 .landing.container .landing.text.outer a {
-    width: 250px; height: 50px; color: white; font-weight: 500; font-size: 1.5em; 
+    width: 200px; height: 50px; color: white; font-weight: 700; font-size: 1.3em; 
     background-color: rgb(255, 26, 26);
 }
-
+.landing.container .landing.text.outer a:hover{
+    background-color: rgb(205, 22, 22);
+}
 
 /* Image widths */
 @media all and (max-width: 1500px){
@@ -36,7 +38,7 @@
         font-size: 3em;
     }
     .landing.container .landing.text.outer a {
-        width: 200px; height: 40px;
+        width: 150px; height: 40px;
     }
 }
 @media all and (max-width: 700px){
@@ -44,11 +46,11 @@
     .landing.container.outer img{ height: 100%}
 
     .landing.container .landing.text.outer h2{
-        font-size: 2em;
+        font-size: 2.5em;
         margin-bottom: 20px;
     }
 
     .landing.container .landing.text.outer a {
-        width: 150px; height: 30px; font-size: 1em; 
+        width: 100px; height: 30px; font-size: 1em; 
     }
 }
