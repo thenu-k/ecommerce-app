@@ -14,15 +14,15 @@ const Categories = () => {
         <div className="categories inner container" aria-label='Inner section'>
             <Link to='' className="category_wrap center">
                 <img src={shoesComfort} alt="" />
-                <span>Comfort</span>
+                <span>Classic</span>
             </Link>
             <Link to='' className="category_wrap center">
                 <img src={shoesBlue} alt="" />
-                <span>Athletic</span>
+                <span>Comfort</span>
             </Link>
             <Link to='' className="category_wrap center">
                 <img src={shoesGreen} alt="" />
-                <span>Classic</span>
+                <span>Athletic</span>
             </Link>
             <Link to='' className="category_wrap center">
                 <img src={shoesPremium} alt="" />
