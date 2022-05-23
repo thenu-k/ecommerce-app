@@ -85,7 +85,6 @@
 @media all and (max-width: 650px){
     .product_items{
         width: 80%;
-        margin-top: 50px;
         grid-template-columns: repeat(2, 1fr)
     }
 

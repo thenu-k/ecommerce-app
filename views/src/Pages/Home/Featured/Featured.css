@@ -18,3 +18,8 @@ section.featured h3{
     margin-bottom: 50px;
 }
 
+@media all and (max-width: 500px){
+    section.featured h3{
+        margin-bottom: 0px;
+    }
+}
