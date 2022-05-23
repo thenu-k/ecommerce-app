@@ -43,8 +43,8 @@ const items2 = [
 ]
 
 const item_details_popular = [
-    {id: 0, title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
-    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}
+    {id: 0, title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'},
+    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'}
 ]
 
 let registeredUsers = []

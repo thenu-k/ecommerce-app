@@ -22,8 +22,8 @@ const SearchResults:FC<Props> = (props) => {
         props.loading ?    
           <LoadingIcon/>
         :
-          // props.results?.map((item)=>{return(<Product item={item} key={item.id}/>)})
-          <ProductGrid/>
+        //@ts-ignore
+          <ProductGrid itemList={props.results}/>
       }
     </section>
 
