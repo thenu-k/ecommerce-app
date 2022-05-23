@@ -21,10 +21,11 @@ const Featured = () => {
 
   return (
     <section className="featured container outer center" aria-label='Featured Section'>
-      <div className="featured container inner" aria-label='Inner Container'>
+      <div className={`featured container inner`} aria-label='Inner Container'>
         <h3>Featured</h3>
         {/*@ts-ignore*/}
         <ProductGrid itemList={featuredItems} loading={loading}/>
+        {/* <button onClick={()=>{document.querySelector('.featured.container.inner')?.classList.toggle('showMore')}}>More</button> */}
       </div>
     </section>
   )
