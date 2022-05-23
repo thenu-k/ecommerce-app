@@ -1,6 +1,4 @@
 import React, {useEffect, useState, FC} from 'react'
-import LoadingIcon from '../../../Models/LoadingIcon/LoadingIcon'
-import Product from '../../../Models/Product/Product'
 import './SearchResults.css'
 
 //Getting item type

@@ -1,4 +1,5 @@
 import React, {FC} from 'react'
+import { Link } from 'react-router-dom'
 import './ProductGrid.css'
 
 const ProductGrid:FC = (props:any) => {
@@ -8,13 +9,13 @@ const ProductGrid:FC = (props:any) => {
             {
             props.itemList.map((item:any)=>{
                 return(
-                    <div className="product_wrap">
+                    <Link to={`/item/${item.id}`} className="product_wrap">
                         <div className="product_image center"><img src={item.primary_img} alt="" /></div>
                         <div className='center product_text'>
                             <div className="title">{item.title}</div>
                             <div className="price">{item.price}</div>
                         </div>
-                    </div>
+                    </Link>
                 )
                 })
             } 
