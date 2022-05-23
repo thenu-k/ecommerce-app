@@ -5,6 +5,7 @@ import './SearchResults.css'
 
 //Getting item type
 import {Item} from '../Search'
+import ProductGrid from '../../../Models/ProductGrid/ProductGrid'
 
 //Prop types
 interface Props {
@@ -21,7 +22,8 @@ const SearchResults:FC<Props> = (props) => {
         props.loading ?    
           <LoadingIcon/>
         :
-          props.results?.map((item)=>{return(<Product item={item} key={item.id}/>)})
+          // props.results?.map((item)=>{return(<Product item={item} key={item.id}/>)})
+          <ProductGrid/>
       }
     </section>
 
