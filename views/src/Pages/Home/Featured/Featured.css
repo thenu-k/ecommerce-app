@@ -84,12 +84,13 @@ section.featured .featured_wrap .price{
 
 @media all and (max-width: 650px){
     section.featured .featured_items{
+        width: 80%;
         margin-top: 50px;
         grid-template-columns: repeat(2, 1fr)
     }
 
     section.featured .featured_wrap{
-        height:55vw;
+        height:45vw;
     }
 
     section.featured h3{
