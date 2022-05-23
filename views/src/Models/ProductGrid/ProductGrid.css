@@ -31,6 +31,10 @@
     background-color: rgb(225, 225, 225);
 }
 
+.product_wrap:hover{
+    filter: brightness(0.9)
+}
+
 .product_wrap .product_image{
     height: 80%; width: 100%;
     overflow: hidden;
