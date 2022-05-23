@@ -18,13 +18,8 @@ const SearchResults:FC<Props> = (props) => {
 
   return (
     <section className="searchresults outer container center" id={props.loading ? 'SearchResultsLoading' : 'SearchResultsDone'}>
-      {
-        props.loading ?    
-          <LoadingIcon/>
-        :
-        //@ts-ignore
-          <ProductGrid itemList={props.results}/>
-      }
+      {/*//@ts-ignore */}
+      <ProductGrid itemList={props.results} loading={props.loading}/>
     </section>
 
   )

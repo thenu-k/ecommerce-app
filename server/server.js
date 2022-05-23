@@ -44,6 +44,9 @@ const items2 = [
 
 const item_details_popular = [
     {id: 0, title: 'Jacket', sizes: [3,12,15], price: '$100', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'},
+    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'},
+    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'},
+    {id: 1, title:'Jeans', price: '$90', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'},
     {id: 1, title:'Jeans', price: '$90', primary_img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg'}
 ]
 
@@ -69,4 +72,8 @@ app.post('/registerUser',json_parser, async(req, res)=>{
 app.get('/item/details/:id', async(req, res)=>{
     console.log(`Received request for item ${req.params.id} details`)
     setTimeout(()=>{res.send(item_details_popular[req.params.id])}, 10)
+})
+
+app.get('/featured', (req, res)=>{
+    res.send(item_details_popular)
 })

@@ -1,4 +1,20 @@
+/* Loading screen */
+.product_items.loading .product_wrap{
+    animation: color_bounce;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
+.product_items.loading .product_text{background-color: transparent}
+
+@keyframes color_bounce {
+    from{background-color: rgb(235, 235, 235) }
+    to{background-color: rgb(245, 245, 245)}
+}
+
+
+/* Main */
  .product_items{
     width: 100%;;
     display: grid;
