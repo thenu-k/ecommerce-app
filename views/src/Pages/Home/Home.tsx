@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       <Landing/>
-      {/* <Featured/> */}
-      <Categories/>
+      <Categories/>      
+      <Featured/>
     </>
   )
 }

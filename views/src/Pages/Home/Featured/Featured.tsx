@@ -7,12 +7,18 @@ import { Link } from 'react-router-dom'
 
 const Featured = () => {
   return (
-    <section className="featured container outer center">
-      <div className="featured container inner">
-        {/* <div className="title outer center"><h3 className='center'>Prime Picks</h3></div>
-        <div className="image outer center"><img src={shoesHorizontal} alt="" /></div> */}
-        <Link to='' className="forHim forThem outer center"><img src={shoesMen} alt="" /><Link to='' className='center shop'>Shop Men</Link></Link>
-        <Link to='' className="forHer forThem outer center"><img src={shoesWomen} alt="" /><Link to=''  className='center shop'>Shop Women</Link></Link>
+    <section className="featured container outer center" aria-label='Featured Section'>
+      <div className="featured container inner" aria-label='Inner Container'>
+        <h3>Featured</h3>
+        <div className="featured_items">
+          <div className="featured_wrap">
+            <div className="featured_image center"><img src='https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8be0676348c04300a579ae14013777d5_9366/Cloudfoam_Pure_2.0_shoes_White_GY4485_01_standard.jpg' alt="" /></div>
+            <div className='center featured_text'>
+              <div className="title">Athletic Shoes</div>
+              <div className="price">$100</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
