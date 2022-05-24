@@ -9,7 +9,7 @@ const ProductGrid:FC = (props:any) => {
                 {
                 props.itemList.map((item:any)=>{
                     return(
-                        <Link to={`/item/${item.id}`} className="product_wrap">
+                        <Link to={`/item/${item.id}`} className="product_wrap" key={item.id}>
                             <div className="product_image center"><img src={item.primary_img} alt="" /></div>
                             <div className='center product_text'>
                                 <div className="title">{item.title}</div>
