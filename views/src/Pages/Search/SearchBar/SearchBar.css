@@ -1,16 +1,15 @@
 
 .searchbar.container.outer{
-    width: 100%; height: 50px;
+    width: 95%; height: 50px;
     display: flex; 
     align-items: center; 
-    position: fixed; top: 65px;   /*Height of header* z-index: 999;*/
     background-color: #fff;
     z-index: 99;
+    margin: 0 2.5%;
 }
 
 .searchbar.container.outer .search_query{
     font-weight: 500; font-size: 1.5em;
-    margin-left: 20px; 
     width: 120px;
 }
 
@@ -18,6 +17,7 @@
     width: 45vw; height: 30px; outline: 0; border: 0; min-width: 500px;
     background-color: rgb(238, 238, 238);
     padding: 0 20px;
+    color:black;
 }
 
 
