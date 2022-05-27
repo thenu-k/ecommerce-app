@@ -8,7 +8,6 @@ const HeaderLinks:FC = () => {
         <li><Link to="/search/popular">Popular</Link></li>
         <li><Link to="/search/new">New Arrivals</Link></li>
         <li><Link to="/sale/sale">Sale</Link></li>
-        <li><Link to="/account">Account</Link></li>
     </>
   )
 }
